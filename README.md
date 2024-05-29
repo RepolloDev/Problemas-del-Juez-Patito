@@ -21,15 +21,15 @@ Este repositorio contiene la solución a los problemas del juez patito, una plat
 Los problemas están organizados en carpetas, cada carpeta contiene al menos 200 problemas que indican el rango de `[id]` de problemas . La estructura de las carpetas es la siguiente:
 
 ```bash
-├── 1001-1201
+├── 1000-1200
 │   ├── [id] - [Nombre del problema].py
 │   ├── [id] - [Nombre del problema].py
 │   ├── ...
-├── 1202-1402
+├── 1201-1401
 │   ├── [id] - [Nombre del problema].py
 │   ├── [id] - [Nombre del problema].py
 │   ├── ...
-├── 1403-1603
+├── 1402-1602
 │   ├── [id] - [Nombre del problema].py
 │   ├── [id] - [Nombre del problema].py
 ├── ...
