@@ -1,5 +1,5 @@
-# 1005: Bob el jardinero
-# Link: https://jv.umsa.bo/oj/problem.php?id=1005
+# 1005 - Bob el jardinero
+# https://jv.umsa.bo/oj/problem.php?id=1005
 
 # 1. Obtener el número de casos de prueba T
 # 2. Recibir un string para cada caso de prueba
