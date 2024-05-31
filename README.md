@@ -13,7 +13,10 @@
 
 Este repositorio contiene la solución a los problemas del juez patito, una plataforma de problemas de la *Universidad Mayor de San Andrés*. Los problemas están resueltos únicamente en Python pero se dejan explicaciones detalladas de los problemas para que puedan ser resueltos en otros lenguajes de programación.
 
-> [!IMPORTANT]
+> [!CAUTION]
+> Este repositorio únicamente es para guardar mis soluciones, no se recomienda copiar y pegar el código, **es mejor intentar resolver los problemas por ti mismo**.
+
+> [!NOTE]
 > No se encuentran todos los problemas de la plataforma, eventualmente se irán añadiendo más problemas conforme los vaya resolviendo o vayan saliendo nuevos problemas.
 
 ## 📁 Estructura de archivos
