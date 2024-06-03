@@ -1,14 +1,18 @@
-# 1006 - Cadena Bailarina
+# 1006
+# Cadena Bailarina
 # https://jv.umsa.bo/oj/problem.php?id=1006
 
-# 1. Obtener el número de casos de prueba T
-# 2. Por cada caso, recibir un string
-# 3. Iterar por cada letra del string
-# 4. Cambiar la secuencia por MAYÚSCULA - minúscula - MAYÚSCULA - minúscula ...
+"""
+#facil #cadenas #bucles #condicionales
 
-# ! Si es una oración, se debe considerar los espacios. Es decir, saltar a la siguiente letra si es un espacio
-# ? Se utiliza código ASCII para cambiar de mayúscula a minúscula y viceversa, pero para Python se puede utilizar `str.upper()` y `str.lower()`
+1. Obtener el número de casos de prueba T
+2. Por cada caso, recibir un string
+3. Iterar por cada letra del string
+4. Cambiar la secuencia por MAYÚSCULA - minúscula - MAYÚSCULA - minúscula ...
 
+! Si es una oración, se debe considerar los espacios. Es decir, saltar a la siguiente letra si es un espacio
+? Se utiliza código ASCII para cambiar de mayúscula a minúscula y viceversa, pero para Python se puede utilizar `str.upper()` y `str.lower()`
+"""
 
 T = int(input())
 for _ in range(T):

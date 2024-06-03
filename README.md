@@ -50,12 +50,19 @@ Cada problema tiene una estructura similar, habrán excepciones pero en general 
 - **Código**: Código de la solución
 
 ```python
-# [id] - [Nombre del problema]
+# [id]
+# [Nombre del problema]
 # [Link del problema]
 
-# 1. Paso 1
-# 2. Paso 2
-# 3. Paso 3
+"""
+#[...tags]
+
+El contenido de la descripción del problema
+
+1. Paso 1
+2. Paso 2
+3. Paso 3
+"""
 
 print("Hola mundo")
 ```
