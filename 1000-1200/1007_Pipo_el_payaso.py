@@ -15,6 +15,7 @@
 * la variable `winner` solo cambia cuando letter_count es mayor a max_words, por lo que si hay un empate, el ganador será el que se haya registrado primero
 """
 
+
 def max_prefix(words):
     """
     La función recibe una LISTA de palabras, crea un diccionario con la cantidad de palabras que comienzan con la misma letra y retorna el máximo valor de palabras que comienzan con la misma letra
@@ -31,7 +32,7 @@ def max_prefix(words):
 T = int(input())
 for i in range(T):
     N = int(input())
-    
+
     # Por defecto el ganador es el primer participante
     winner = 1
     max_words = 0
@@ -39,7 +40,7 @@ for i in range(T):
     for j in range(N):
         text = input()
         words = text.split()
-        prefix_count = max_prefix(words)        
+        prefix_count = max_prefix(words)
         if prefix_count > max_words:
             max_words = prefix_count
             winner = j + 1

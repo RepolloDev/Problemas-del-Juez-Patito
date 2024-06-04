@@ -5,7 +5,7 @@
 """
 #pruebas #facil #matematicas #bucles #condicionales
 
-* Solución incompleta
+! Solución incompleta - Solo para referencia
 
 1. Obtener el número de casos de prueba T
 2. Recibir un string para cada caso de prueba
@@ -23,15 +23,15 @@ for k in range(1, T + 1):
     total = len(text)
     a, e, i, o, u = 0, 0, 0, 0, 0
     for char in text:
-        if char == 'a':
+        if char == "a":
             a += 1
-        elif char == 'e':
+        elif char == "e":
             e += 1
-        elif char == 'i':
+        elif char == "i":
             i += 1
-        elif char == 'o':
+        elif char == "o":
             o += 1
-        elif char == 'u':
+        elif char == "u":
             u += 1
 
     print(f"Caso {k}:")

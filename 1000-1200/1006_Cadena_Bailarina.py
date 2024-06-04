@@ -11,6 +11,7 @@
 4. Cambiar la secuencia por MAYÚSCULA - minúscula - MAYÚSCULA - minúscula ...
 
 ! Si es una oración, se debe considerar los espacios. Es decir, saltar a la siguiente letra si es un espacio
+
 ? Se utiliza código ASCII para cambiar de mayúscula a minúscula y viceversa, pero para Python se puede utilizar `str.upper()` y `str.lower()`
 """
 
