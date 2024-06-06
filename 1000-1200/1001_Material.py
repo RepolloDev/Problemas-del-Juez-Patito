@@ -5,7 +5,7 @@
 """
 #facil #bucles #facil
 
-1. Obtener la cantidad de números
+1. Obtener la cantidad de números `N`
 2. Leer el i-ésimo número
 3. Mostrar el i-ésimo número
 """

@@ -5,7 +5,7 @@
 """
 #facil #cadenas #bucles #condicionales #facil
 
-1. Obtener el número de casos de prueba T
+1. Obtener el número de casos de prueba `T`
 2. Por cada caso, recibir un string
 3. Iterar por cada letra del string
 4. Cambiar la secuencia por MAYÚSCULA - minúscula - MAYÚSCULA - minúscula ...

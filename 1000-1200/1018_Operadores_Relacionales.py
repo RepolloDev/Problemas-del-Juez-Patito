@@ -7,7 +7,7 @@
 
 1. Recibir el número de casos de prueba `t`
 2. Por cada caso, recibir los números `a` y `b`
-3. Comparar `a` y `b`, imprimir su relación respectiva
+3. Comparar `a` y `b`, imprimir su relación respectivas
 """
 
 t = int(input())

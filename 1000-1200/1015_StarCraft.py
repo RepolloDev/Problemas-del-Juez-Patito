@@ -5,10 +5,10 @@
 """
 #matematicas #bucles #condicionales #facil
 
-1. Recibir los casos de prueba T
-2. Por cada caso de prueba, recibir un entero N que es la cantidad de coordenadas
-3. Recibir N lineas, dos enteros x, y que representan las coordenadas de una estructura
-4. Recibir la coordenadas x, y donde cae la bomba y el radio r que cubre la bomba
+1. Recibir los casos de prueba `T`
+2. Por cada caso de prueba, recibir un entero `N` que es la cantidad de coordenadas
+3. Recibir `N` lineas, dos enteros `x`, `y` que representan las coordenadas de una estructura
+4. Recibir la coordenadas `x`, `y` donde cae la bomba y el radio `r` que cubre la bomba
 5. Calcular la distancia entre la coordenada de la bomba y cada una de las coordenadas de las estructuras
 6. Verificar si la distancia es menor o igual al radio de la bomba
 """

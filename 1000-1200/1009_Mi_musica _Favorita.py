@@ -5,12 +5,12 @@
 """
 #pruebas #matemáticas #listas #medio
 
-1. Obtener el número de casos de prueba TC
+1. Obtener el número de casos de prueba `TC`
 2. Por cada caso de prueba, obtener el siguiente string "N T ...T_i"
-    - N: Minutos soportados por el casete
-    - T: Número de canciones en la lista
-    - T_i: Duración de la i-ésima canción (se maneja como time_list)
-3. Obtener el número máximo de canciones que entran en N minutos
+    - `N`: Minutos soportados por el casete
+    - `T`: Número de canciones en la lista
+    - `T_i`: Duración de la i-ésima canción (se maneja como time_list)
+3. Obtener el número máximo de canciones que entran en `N` minutos
 4. Imprimir el resultado con espacios
 """
 

@@ -6,9 +6,9 @@
 #cadenas #diccionarios #búsqueda #bucles #condicionales #medio
 
 Dado la variable `word` que contiene una cadena sin espacios de la palabra
-a buscar, para el caso es "UMSAICPC".
+a buscar, para el caso es `"UMSAICPC"`.
 
-1. Obtener el número de casos de prueba N
+1. Obtener el número de casos de prueba `N`
 2. Por cada caso, obtener la cadena de caracteres
 3. Obtener un diccionario de la cantidad de caracteres de la cadena
 4. De la cadena de la palabra a buscar, verificar si la cantidad de caracteres de la cadena de entrada es mayor o igual a la cantidad de caracteres de la palabra a buscar

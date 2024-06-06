@@ -5,8 +5,8 @@
 """
 #busqueda #ordenamiento #listas #cadenas #bucles #pruebas #facil
 
-1. Obtener los casos de prueba T
-2. Por cada caso de prueba obtener el número de archivos N
+1. Obtener los casos de prueba `T``
+2. Por cada caso de prueba obtener el número de archivos `N`
 3. Por cada caso de prueba leer y guardar los nombres de los archivos
 4. Buscar "." o ".." en la lista de archivos
 5. Verificar si "." y ".." son los últimos elementos de la lista (en cualquier orden)

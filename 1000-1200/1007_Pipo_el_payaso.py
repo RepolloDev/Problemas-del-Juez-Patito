@@ -5,14 +5,14 @@
 """
 #facil #cadenas #bucles #condicionaless #medio
 
-1. Obtener el número de casos de prueba T
-2. Por cada caso, recibir el número de participantes N
+1. Obtener el número de casos de prueba `T`
+2. Por cada caso, recibir el número de participantes `N`
 3. Por cada participante, recibir un string (trabalenguas)
 4. Convertir el string en una lista de palabras con `.split()`
 5. Contar la cantidad de palabras que comienzan con la misma letra
 6. Obtener el máximo de palabras que comienzan con la misma letra
 
-* la variable `winner` solo cambia cuando letter_count es mayor a max_words, por lo que si hay un empate, el ganador será el que se haya registrado primero
+* la variable `winner` solo cambia cuando `letter_count` es mayor a `max_words`, por lo que si hay un empate, el ganador será el que se haya registrado primero
 """
 
 

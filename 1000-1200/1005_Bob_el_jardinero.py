@@ -7,10 +7,10 @@
 
 ! Solución incompleta - Solo para referencia
 
-1. Obtener el número de casos de prueba T
+1. Obtener el número de casos de prueba `T`
 2. Recibir un string para cada caso de prueba
 3. Contar las vocales en cada string
-4. Calcular el porcentaje de cada vocal (vocal * 100 / total)
+4. Calcular el porcentaje de cada vocal `(vocal * 100 / total)`
 
 ! En el for se utiliza `k` para no tener un conflicto de variables entre el enumerador y la vocal `ì`
 

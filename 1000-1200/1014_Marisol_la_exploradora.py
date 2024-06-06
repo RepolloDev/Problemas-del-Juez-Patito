@@ -1,9 +1,6 @@
 # 1014
 # Marisol la exploradora
 # https://jv.umsa.bo/oj/problem.php?id=1014
-import sys
-from queue import Queue
-
 """
 #grafo #bfs #recorrido #bucles #condicionales #dificil
 
@@ -11,14 +8,18 @@ TODO: Mejorar la complejidad de memoria y tiempo
 
 ? Realizarlo con kosaraju
 
-1. Recibir los enteros N y M hasta una condición de parada
-2. Verficar si N y M son diferentes a 0 (si lo es terminar de leer datos)
-3. Recibir M lineas, dos enteros X, Y que representa que desde el lugar X se puede llegar a Y
-4. Guardar el valor de Y en una lista de adyacencia de X
+1. Recibir los enteros `N` y `M` hasta una condición de parada
+2. Verficar si `N` y `M` son diferentes a 0 (si lo es terminar de leer datos)
+3. Recibir `M` lineas, dos enteros `X`, `Y` que representa que desde el lugar `X` se puede llegar a `Y`
+4. Guardar el valor de `Y` en una lista de adyacencia de `X`
 5. Recorrer el grafo mediante bfs desde cualquier nodo (para el caso desde el nodo 0)
 6. Si todos los nodos fueron visitados imprimir "SI" en caso contrario "NO"
 7. Verificar que desde cualquier nodo se pueda llegar a todos los nodos
 """
+
+import sys
+from queue import Queue
+
 
 def bfs(grafo, nodo=0):
     visitados = [False] * len(grafo)
@@ -35,6 +36,7 @@ def bfs(grafo, nodo=0):
 
     # Verificar si todos en la lista de visitados son True
     return all(visitados)
+
 
 for line in sys.stdin:
     N, M = map(int, line.split())

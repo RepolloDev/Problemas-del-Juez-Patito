@@ -5,8 +5,8 @@
 """
 #matematicas #facil
 
-1. Recibir los valores de A y B
-2. Mostrar la suma de A y B
+1. Recibir los valores de `A` y `B`
+2. Mostrar la suma de `A` y `B`
 """
 
 A, B = map(int, input().split())
