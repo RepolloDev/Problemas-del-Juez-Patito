@@ -3,7 +3,7 @@
 # https://jv.umsa.bo/oj/problem.php?id=1001
 
 """
-#facil #bucles
+#facil #bucles #facil
 
 1. Obtener la cantidad de números
 2. Leer el i-ésimo número

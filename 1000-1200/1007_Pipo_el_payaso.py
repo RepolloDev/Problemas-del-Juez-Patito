@@ -3,7 +3,7 @@
 # https://jv.umsa.bo/oj/problem.php?id=1007
 
 """
-#facil #cadenas #bucles #condicionales
+#facil #cadenas #bucles #condicionaless #medio
 
 1. Obtener el número de casos de prueba T
 2. Por cada caso, recibir el número de participantes N

@@ -3,7 +3,7 @@
 # https://jv.umsa.bo/oj/problem.php?id=1011
 
 """
-#math #bucles
+#math #bucles #facil
 
 1. Recibir el número (N) de jugadores del equipo
 2. Por cada jugador, recibir las coordenadas x, y

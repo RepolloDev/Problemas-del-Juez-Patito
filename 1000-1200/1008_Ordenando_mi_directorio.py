@@ -3,7 +3,7 @@
 # https://jv.umsa.bo/oj/problem.php?id=1008
 
 """
-#busqueda #ordenamiento #listas #cadenas #bucles #pruebas
+#busqueda #ordenamiento #listas #cadenas #bucles #pruebas #facil
 
 1. Obtener los casos de prueba T
 2. Por cada caso de prueba obtener el número de archivos N

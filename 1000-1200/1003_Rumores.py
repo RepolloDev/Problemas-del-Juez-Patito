@@ -3,7 +3,7 @@
 # https://jv.umsa.bo/oj/problem.php?id=1003
 
 """
-#grafos #búsqueda #bfs #recorrido
+#grafos #búsqueda #bfs #recorrido #medio
 
 ! Existe un problema con el Juez en línea, por lo que no se puede verificar la solución. Sin embargo, el código es correcto.
 

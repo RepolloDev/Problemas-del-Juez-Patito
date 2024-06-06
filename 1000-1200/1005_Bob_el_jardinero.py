@@ -3,7 +3,7 @@
 # https://jv.umsa.bo/oj/problem.php?id=1005
 
 """
-#pruebas #facil #matematicas #bucles #condicionales
+#pruebas #facil #matematicas #bucles #condicionales #facil
 
 ! Solución incompleta - Solo para referencia
 

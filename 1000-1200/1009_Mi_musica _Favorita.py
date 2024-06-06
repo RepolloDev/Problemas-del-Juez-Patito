@@ -3,7 +3,7 @@
 # https://jv.umsa.bo/oj/problem.php?id=1009
 
 """
-#pruebas #matemáticas #listas
+#pruebas #matemáticas #listas #medio
 
 1. Obtener el número de casos de prueba TC
 2. Por cada caso de prueba, obtener el siguiente string "N T ...T_i"

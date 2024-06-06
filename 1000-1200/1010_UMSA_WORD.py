@@ -3,7 +3,7 @@
 # https://jv.umsa.bo/oj/problem.php?id=1010
 
 """
-#cadenas #diccionarios #búsqueda #bucles #condicionales
+#cadenas #diccionarios #búsqueda #bucles #condicionales #medio
 
 Dado la variable `word` que contiene una cadena sin espacios de la palabra
 a buscar, para el caso es "UMSAICPC".
