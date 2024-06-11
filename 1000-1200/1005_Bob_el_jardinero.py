@@ -5,14 +5,14 @@
 """
 #pruebas #facil #matematicas #bucles #condicionales #facil
 
-! Solución incompleta - Solo para referencia
+! La solución está incompleta, se necesita mostrar dos decimales, no redondear a dos decimales
 
 1. Obtener el número de casos de prueba `T`
 2. Recibir un string para cada caso de prueba
 3. Contar las vocales en cada string
 4. Calcular el porcentaje de cada vocal `(vocal * 100 / total)`
 
-! En el for se utiliza `k` para no tener un conflicto de variables entre el enumerador y la vocal `ì`
+* En el for se utiliza `k` para no tener un conflicto de variables entre el enumerador y la vocal `ì`
 
 ? Si se utiliza en el Juez para verificar, dará "Respuesta incorrecta", para la traducción c++ funciona correctamente
 """

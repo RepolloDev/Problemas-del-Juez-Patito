@@ -5,7 +5,7 @@
 """
 #grafos #búsqueda #bfs #recorrido #medio
 
-! Existe un problema con el Juez en línea, por lo que no se puede verificar la solución. Sin embargo, el código es correcto.
+! Existe un problema con el Juez en línea, por lo que no se puede verificar la solución. Sin embargo, el código es correcto, puede verificarse traduciendo el código a otro lenguaje.
 
 Para este problema, se utiliza el concepto de grafos como listas de adyacencia para 
 determinar si una persona puede llegar a otra, en simples palabras es verificar
@@ -19,19 +19,18 @@ si el elemento `graph[X]` contiene a `Y` o algún amigo de `Y`.
 6. Imprimir `"SI"` si puede llegar, `"NO"` en caso contrario
 """
 
-from queue import Queue
 
 def verify(graph, X, Y):
     visited = [False for _ in range(len(graph) + 1)]
-    queue = Queue()
-    queue.put(X)
+    queue = [X]
     visited[X] = True
-    while queue.qsize() > 0:
-        u = queue.get()
-        for v in graph[u]:
-            if not visited[v]:
-                visited[v] = True
-                queue.put(v)
+
+    while queue:
+        node = queue.pop(0)
+        for friend in graph[node]:
+            if not visited[friend]:
+                queue.append(friend)
+                visited[friend] = True
     return visited[Y]
 
 T = int(input())
