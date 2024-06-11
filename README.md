@@ -19,9 +19,28 @@ Este repositorio contiene la solución a los problemas del juez patito, una plat
 > [!NOTE]
 > No se encuentran todos los problemas de la plataforma, eventualmente se irán añadiendo más problemas conforme los vaya resolviendo o vayan saliendo nuevos problemas.
 
+### 📚 Contenid
+
+- [🎯 Objetivos](#-objetivos)
+- [📁 Estructura de archivos](#-estructura-de-archivos)
+- [📄 Formato de archivos](#-formato-de-archivos)
+
+
+## 🎯 Objetivos
+
+- [ ] Resolver 100 problemas
+- [ ] Resolver 200 problemas
+- [ ] Resolver 400 problemas
+- [ ] Resolver 800 problemas
+- [ ] Resolver 1200 problemas
+- [ ] Resolver TODOS los problemas
+- [ ] Crear una base de datos con los problemas y soluciones
+- [ ] Crear una página web estática para mostrar las soluciones
+
+
 ## 📁 Estructura de archivos
 
-Los problemas están organizados en carpetas, cada carpeta contiene al menos 200 problemas que indican el rango de `[id]` de problemas. Además, cada archivo está separado por `_` que representan los espacios en blanco del nombre del problema.
+Los problemas están organizados en carpetas, **cada carpeta contiene al menos 200 problemas** que indican el rango de `[id]` de problemas. Además, cada archivo está separado por `_` que representan los espacios en blanco del nombre del problema.
 
 ```bash
 ├── 1000-1200
@@ -39,29 +58,32 @@ Los problemas están organizados en carpetas, cada carpeta contiene al menos 200
 │
 ```
 
-## 📄 Estrucutra en los archivos
+## 📄 Formato de archivos
 
-Cada problema tiene una estructura similar, habrán excepciones pero en general se seguirá la siguiente estructura
+En cada archivo Python se encuentra la solución de los problemas en código, además de comentarios los cuales son utilizados para guardarse en una base de datos y poder ser consultados en el futuro.
 
-- **[id]**: Identificador del problema
-- **[Nombre del problema]**: Nombre del problema
-- **[Link]**: Link del problema
-- **Pasos**: Serie de comentarios que explican los pasos a seguir para resolver el problema
-- **Código**: Código de la solución
+> [!NOTE]
+> Los comentarios multilineas son contenido markdown potenciado con plugins de remark, por lo que no se verán correctamente en un editor de texto plano.
 
 ```python
 # [id]
 # [Nombre del problema]
 # [Link del problema]
+# tag1 tag2 tag3-con-espacios
 
-"""
-#[...tags]
-
+"""content
 El contenido de la descripción del problema
+con imagenes o algun contexto necesario para
+poder resolver el problema
+"""
 
-1. Paso 1
-2. Paso 2
-3. Paso 3
+"""steps
+En aquí se describe los pasos algoritmicos
+que se sigue para poder resolver el problemas
+
+1. leer datos en la variable `N`
+2. hacer algo con `N`
+3. ...
 """
 
 print("Hola mundo")
