@@ -1,6 +1,6 @@
 <h1 align="center">Problemas del Juez Patito 🔨🦆</h1>
 
-![](./assets/banner.png)
+![](./public/banner.png)
 
 <p align="center">
     <a href="https://www.python.org/">
@@ -71,7 +71,7 @@ En cada archivo Python se encuentra la solución de los problemas en código, ad
 # [Link del problema]
 # tag1 tag2 tag3-con-espacios
 
-"""content
+"""description
 El contenido de la descripción del problema
 con imagenes o algun contexto necesario para
 poder resolver el problema
@@ -87,4 +87,10 @@ que se sigue para poder resolver el problemas
 """
 
 print("Hola mundo")
+```
+
+## Static Site Generator (Node.js)
+
+```shell
+npm run build.server
 ```

@@ -1,20 +1,22 @@
 # 1010
 # UMSA WORD
 # https://jv.umsa.bo/oj/problem.php?id=1010
+# cadenas hashmap busqueda bucles condicionales medio
 
-"""
-#cadenas #diccionarios #búsqueda #bucles #condicionales #medio
-
+"""description
 Dado la variable `word` que contiene una cadena sin espacios de la palabra
 a buscar, para el caso es `"UMSAICPC"`.
 
+> [!check] Solución aceptada
+> La solución es para casos genéricos, no solo para la palabra "UMSAICPC"
+"""
+
+"""steps
 1. Obtener el número de casos de prueba `N`
 2. Por cada caso, obtener la cadena de caracteres
 3. Obtener un diccionario de la cantidad de caracteres de la cadena
 4. De la cadena de la palabra a buscar, verificar si la cantidad de caracteres de la cadena de entrada es mayor o igual a la cantidad de caracteres de la palabra a buscar
 5. Si es así, imprimir "ES POSIBLE", caso contrario "NO ES POSIBLE"
-
-* La solución es para casos genéricos, no solo para la palabra "UMSAICPC"
 """
 
 

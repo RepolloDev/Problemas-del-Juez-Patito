@@ -1,10 +1,17 @@
 # 1020
 # Planificando un viaje
 # https://jv.umsa.bo/oj/problem.php?id=1020
+# facil listas bucles condicionales
 
+"""description
+> [!note] Nota
+> Muy aparte de la difucultad para ingresar datos,
+> resaltar que el problema se basa en saber la cantidad de camas
+> disponibles en un hotel y su precio, para saber si es posible
+> alojar a todos los participantes.
 """
-#facil #listas #bucles #condicionales
 
+"""steps
 1. Recibir los casos de prueba hasta que ya no haya datos
 2. Recibir una linea con los siguientes datos:
     - `N`: número de participantes
@@ -24,7 +31,7 @@ import sys
 for line in sys.stdin:
     if line == "\n":
         break
-    
+
     N, P, H, S = map(int, line.split())
     prices = []
     for i in range(H):
@@ -34,7 +41,7 @@ for line in sys.stdin:
         any_camas = any([c >= N for c in camas])
         if any_camas and p * N <= P:
             prices.append(p * N)
-    
+
     if prices:
         print(min(prices))
     else:

@@ -1,13 +1,13 @@
 # 1014
 # Marisol la exploradora
 # https://jv.umsa.bo/oj/problem.php?id=1014
+# grafos recorrido bucles condicionales dificil
+
+"""description
+TODO: Mejorar la complejidad de memoria y tiempo, Realizarlo con kosaraju
 """
-#grafo #bfs #recorrido #bucles #condicionales #dificil
 
-TODO: Mejorar la complejidad de memoria y tiempo
-
-? Realizarlo con kosaraju
-
+"""steps
 1. Recibir los enteros `N` y `M` hasta una condición de parada
 2. Verficar si `N` y `M` son diferentes a 0 (si lo es terminar de leer datos)
 3. Recibir `M` lineas, dos enteros `X`, `Y` que representa que desde el lugar `X` se puede llegar a `Y`

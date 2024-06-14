@@ -1,16 +1,18 @@
 # 1011
 # Futbol
 # https://jv.umsa.bo/oj/problem.php?id=1011
+# matematicas bucles facil
 
+"""description
+Para este caso es necesario utilizar la fórmula de la distancia
+entre dos puntos en un plano cartesiano.
+
+$$
+Distancia = \sqrt{(x_1 - x_2)^2 + (y_1 - y_2)^2}
+$$
 """
-#math #bucles #facil
 
-Para este caso es necesario utilizar la fórmula de la distancia entre dos puntos en un plano cartesiano.
-
-$$
-Distancia = \sqrt{(x_1 - x_2)^2 + (y_1 - y_2)^2}s
-$$
-
+"""steps
 1. Recibir el número (`N`) de jugadores del equipo
 2. Por cada jugador, recibir las coordenadas `x`, `y`
 3. Recibir el número de consultas `Q`

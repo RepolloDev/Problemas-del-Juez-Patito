@@ -1,10 +1,13 @@
 # 1009
 # Mi música Favorita
 # https://jv.umsa.bo/oj/problem.php?id=1009
+# matematicas listas medio
 
+"""description
+TODO: Implementar la función que obtiene el número máximo de canciones que entran en N minutos
 """
-#pruebas #matemáticas #listas #medio
 
+"""steps
 1. Obtener el número de casos de prueba `TC`
 2. Por cada caso de prueba, obtener el siguiente string "N T ...T_i"
     - `N`: Minutos soportados por el casete
@@ -16,13 +19,12 @@
 
 
 def get_max_songs(N, time_list):
-    # TODO: Implementar la función que obtiene el número máximo de canciones que entran en N minutos
     pass
 
 
 TC = int(input())
 for i in range(TC):
-    # *time_list es el resto de la lista de tiempos
+    # * time_list es el resto de la lista de tiempos
     N, T, *times_list = input().split()
     result = get_max_songs(N, times_list)
     # Imprimir el resultado con espacios

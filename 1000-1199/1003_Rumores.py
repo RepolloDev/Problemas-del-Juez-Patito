@@ -1,16 +1,19 @@
 # 1003
 # Rumores
 # https://jv.umsa.bo/oj/problem.php?id=1003
+# grafos busqueda recorrido medio
 
-"""
-#grafos #búsqueda #bfs #recorrido #medio
+"""description
+> [!alert] ¡Atención
+> Existe un problema con el Juez en línea, por lo que no se puede verificar la solución.
+> Sin embargo, el código es correcto, puede verificarse traduciendo el código a otro lenguaje.
 
-! Existe un problema con el Juez en línea, por lo que no se puede verificar la solución. Sin embargo, el código es correcto, puede verificarse traduciendo el código a otro lenguaje.
-
-Para este problema, se utiliza el concepto de grafos como listas de adyacencia para 
+Para este problema, se utiliza el concepto de grafos como listas de adyacencia para
 determinar si una persona puede llegar a otra, en simples palabras es verificar
 si el elemento `graph[X]` contiene a `Y` o algún amigo de `Y`.
+"""
 
+"""steps
 1. Obtener el número de casos de prueba `T`
 2. Por cada caso, obtener el número de personas `N` y el número de relaciones `M`
 3. Utilizando un grafo, obtener las relaciones entre las personas `a --> b`
@@ -32,6 +35,7 @@ def verify(graph, X, Y):
                 queue.append(friend)
                 visited[friend] = True
     return visited[Y]
+
 
 T = int(input())
 for i in range(T):

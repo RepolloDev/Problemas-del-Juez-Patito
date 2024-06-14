@@ -1,13 +1,13 @@
 # 1022
 # Mercado Magico
 # https://jv.umsa.bo/oj/problem.php?id=1022
+# medio listas bucles condicionales
 
-"""
-#medio #listas #bucles #condicionales
-
+"""description
 TODO: Mejorar la complejidad de tiempo, sacrificar memoria por tiempo
-! Resuelto, pero no aceptado por el juez patito
+"""
 
+"""steps
 1. Recibir el número de casos de prueba `T`
 2. Por cada caso, recibir el número de productos `N` y el número de consultas `Q`
 3. Recibir la lista de precios de los productos, en total son `N` precios
