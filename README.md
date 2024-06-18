@@ -1,6 +1,6 @@
 <h1 align="center">Problemas del Juez Patito 🔨🦆</h1>
 
-![](./public/banner.png)
+![](./assets/banner.png)
 
 <p align="center">
     <a href="https://www.python.org/">
@@ -24,6 +24,7 @@ Este repositorio contiene la solución a los problemas del juez patito, una plat
 - [🎯 Objetivos](#-objetivos)
 - [📁 Estructura de archivos](#-estructura-de-archivos)
 - [📄 Formato de archivos](#-formato-de-archivos)
+- [Static Site Generator (Node.js)](#static-site-generator-nodejs)
 
 
 ## 🎯 Objetivos
