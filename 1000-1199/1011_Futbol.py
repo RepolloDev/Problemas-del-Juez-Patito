@@ -8,7 +8,7 @@ Para este caso es necesario utilizar la fórmula de la distancia
 entre dos puntos en un plano cartesiano.
 
 $$
-Distancia = \sqrt{(x_1 - x_2)^2 + (y_1 - y_2)^2}
+Distancia = \\sqrt{(x_1 - x_2)^2 + (y_1 - y_2)^2}
 $$
 """
 
