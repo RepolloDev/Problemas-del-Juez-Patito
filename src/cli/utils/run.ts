@@ -3,12 +3,16 @@ import chalk from "chalk";
 import fs from "fs";
 import path from "path";
 import { __dirname } from "@/utils/paths";
-import type { BasicData } from "./types";
+import type { ScriptData } from "@/data/types";
 
 async function runPythonScript(scriptPath: string): Promise<string> {
   const tempDir = path.join(__dirname, "src", "cli", "temp");
   if (!fs.existsSync(tempDir)) {
     fs.mkdirSync(tempDir, { recursive: true });
+  }
+
+  if (!fs.existsSync(scriptPath)) {
+    throw new Error("El script no existe");
   }
 
   return new Promise((resolve, reject) => {
@@ -37,7 +41,7 @@ async function runPythonScript(scriptPath: string): Promise<string> {
   });
 }
 
-async function run<T extends BasicData>(data: T) {
+export default async function run(data: ScriptData) {
   // mensaje de bienvenida
   const inputMessage = chalk.green.bold.underline(
     `🎹 Ingrese los datos para el script\n`
@@ -52,5 +56,3 @@ async function run<T extends BasicData>(data: T) {
   console.log(outputMessage);
   console.log(fs.readFileSync(output, "utf-8"));
 }
-
-export default run;

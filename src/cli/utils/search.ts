@@ -2,7 +2,7 @@ import autocomplete from "inquirer-autocomplete-standalone";
 import searchData from "@/utils/searchData";
 import chalk from "chalk";
 
-export async function search() {
+export default async function search() {
   const result = await autocomplete({
     message: chalk.bold("🔍 Buscar un script"),
     source: async (input) => {
@@ -20,5 +20,3 @@ export async function search() {
   });
   return result;
 }
-
-export default search;

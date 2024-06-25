@@ -2,12 +2,12 @@
   "name": "jp-problemas",
   "type": "module",
   "scripts": {
-    "data:build": "bun ./src/data/scripts/build.ts",
-    "data:delete": "bun ./src/data/scripts/delete.ts",
-    "data:rebuild": "bun ./src/data/scripts/rebuild.ts"
+    "data:build": "tsx ./src/data/scripts/build.ts",
+    "data:delete": "tsx ./src/data/scripts/delete.ts",
+    "data:rebuild": "tsx ./src/data/scripts/rebuild.ts",
+    "cli": "tsx ./src/cli/index.ts"
   },
   "devDependencies": {
-    "@types/bun": "latest",
     "@types/console-clear": "^1.1.4",
     "@types/inquirer": "^9.0.7",
     "@types/node": "^20.14.8",
