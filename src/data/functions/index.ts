@@ -1,2 +1,2 @@
 export * from "./metaDB";
-export * from "./scriptsDB";
+export * from "./scriptDB";

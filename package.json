@@ -1,7 +1,11 @@
 {
   "name": "jp-problemas",
   "type": "module",
-  "scripts": {},
+  "scripts": {
+    "data:build": "bun ./src/data/scripts/build.ts",
+    "data:delete": "bun ./src/data/scripts/delete.ts",
+    "data:rebuild": "bun ./src/data/scripts/rebuild.ts"
+  },
   "devDependencies": {
     "@types/bun": "latest",
     "@types/console-clear": "^1.1.4",

@@ -1,4 +1,4 @@
-import { scriptsDB } from "@/data";
+import { UseScriptDB } from "@/data";
 import type { ScriptData } from "@/data/types";
 import FlexSearch from "flexsearch";
 
@@ -18,7 +18,7 @@ async function searchData(input?: string) {
     },
   });
 
-  const files = scriptsDB.data;
+  const files = await UseScriptDB.getScripts();
   files.forEach((file) => index.add(file));
 
   const results = await index.searchAsync(input, {
