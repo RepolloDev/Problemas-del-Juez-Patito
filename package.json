@@ -1,12 +1,7 @@
 {
   "name": "jp-problemas",
   "type": "module",
-  "scripts": {
-    "build:": "bun ./src/web/index.ts",
-    "cli:run": "tsx ./src/cli/index.ts",
-    "data:clear": "bun ./src/data/scripts/clear.ts",
-    "data:build": "bun ./src/data/scripts/update.ts"
-  },
+  "scripts": {},
   "devDependencies": {
     "@types/bun": "latest",
     "@types/console-clear": "^1.1.4",

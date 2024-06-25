@@ -5,5 +5,4 @@ bun.lockb
 
 src/cli/temp
 
-src/data/scripts.json
-src/data/meta.json
+src/data/*.json

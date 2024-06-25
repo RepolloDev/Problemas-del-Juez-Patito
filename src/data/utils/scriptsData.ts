@@ -1,7 +1,7 @@
 import { __dirname } from "@/utils/paths";
+import { genRange } from "@/utils/genRange";
 import fs from "fs";
 import path from "path";
-import { genRange } from "./genRange";
 import { isValidExt } from "./languages";
 import { getFileData } from "./fileParsers";
 
