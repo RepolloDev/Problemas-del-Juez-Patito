@@ -24,7 +24,6 @@ Este repositorio contiene la solución a los problemas del juez patito, una plat
 - [🎯 Objetivos](#-objetivos)
 - [📁 Estructura de archivos](#-estructura-de-archivos)
 - [📄 Formato de archivos](#-formato-de-archivos)
-- [Static Site Generator (Node.js)](#static-site-generator-nodejs)
 
 
 ## 🎯 Objetivos
@@ -35,7 +34,8 @@ Este repositorio contiene la solución a los problemas del juez patito, una plat
 - [ ] Resolver 800 problemas
 - [ ] Resolver 1200 problemas
 - [ ] Resolver TODOS los problemas
-- [ ] Crear una base de datos con los problemas y soluciones
+- [x] Crear una base de datos con los problemas y soluciones
+- [ ] Crear un CLI para interactuar con el proyecto
 - [ ] Crear una página web estática para mostrar las soluciones
 
 
@@ -88,10 +88,4 @@ que se sigue para poder resolver el problemas
 """
 
 print("Hola mundo")
-```
-
-## Static Site Generator (Node.js)
-
-```shell
-npm run build.server
 ```
