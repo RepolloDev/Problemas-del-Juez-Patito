@@ -36,6 +36,10 @@ export async function getPathInfo(filePath: string): Promise<PathInfo> {
     throw new Error(`Invalid extension: ${extension} in file: ${filePath}`);
   }
 
+  if (isNaN(Number(id))) {
+    throw new Error(`Invalid id: ${id} in file: ${filePath}`);
+  }
+
   // if the file name has multiple extensions, join them
   name = (name + exts.join(".")).replace(/_/g, " ");
 
@@ -68,7 +72,7 @@ export async function getFileInfo(value: string | PathInfo): Promise<FileInfo> {
   const [idLine, nameLine, urlLine, tagsLine, ...rest] = plainText.split("\n");
 
   const url = removeInlineComments(urlLine, extension);
-  const tags = removeInlineComments(tagsLine, extension).split(" ");
+  const tags = removeInlineComments(tagsLine, extension)?.split(" ") ?? [];
   const content = rest.join("\n");
 
   return {

@@ -7,5 +7,5 @@ import { getLanguageByExt, type FileExt } from "./languages";
  */
 export function removeInlineComments(text: string, ext: FileExt) {
   const { comment } = getLanguageByExt(ext);
-  return text.replace(comment, "").trim().replace(/\n/g, "");
+  return text?.replace(comment, "").trim().replace(/\n/g, "");
 }
