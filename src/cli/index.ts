@@ -1,5 +1,6 @@
 import chalk from "chalk";
 import runScript from "./views/runScript";
+import deleteScript from "./views/deleteScript";
 import inquirer from "inquirer";
 import clear from "console-clear";
 
@@ -27,7 +28,6 @@ while (true) {
         },
         {
           name: "📍 Eliminar script",
-          disabled: "Próximamente",
           value: "delete",
         },
         {
@@ -41,6 +41,9 @@ while (true) {
   switch (action) {
     case "run":
       await runScript();
+      break;
+    case "delete":
+      await deleteScript();
       break;
     case "exit":
       clear();

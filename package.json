@@ -15,6 +15,7 @@
     "chalk": "^5.3.0",
     "inquirer": "^9.2.23",
     "inquirer-autocomplete-standalone": "^0.8.1",
+    "inquirer-press-to-continue": "^1.2.0",
     "rehype-mathjax": "^6.0.0",
     "rehype-pretty-code": "^0.13.2",
     "rehype-stringify": "^10.0.0",

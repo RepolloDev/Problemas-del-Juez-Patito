@@ -4,6 +4,7 @@ import { showBasic } from "../utils/show";
 import clear from "console-clear";
 import inquirer from "inquirer";
 import chalk from "chalk";
+import wait from "../utils/wait";
 
 async function continueRun(): Promise<boolean> {
   const { confirm } = await inquirer.prompt([
@@ -28,5 +29,6 @@ export default async function view() {
     showBasic(script);
     await run(script);
   } while (await continueRun());
+  await wait();
   clear();
 }
