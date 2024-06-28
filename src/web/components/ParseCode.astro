@@ -1,0 +1,69 @@
+---
+import { codeHTML } from "@/utils/parsers";
+import { getLanguageByExt, type FileExt } from "@/data/utils/languages";
+import Link from "./Link.astro";
+interface Props {
+  content: string;
+  extension: FileExt;
+  path: string;
+}
+
+const { content, extension, path } = Astro.props;
+const html = await codeHTML(content);
+
+const { color, name } = getLanguageByExt(extension);
+---
+
+<div class="code-presentation">
+  <div class="code-header">
+    <div class="language-info">
+      <span style={`background: ${color};`} class="dot"></span>
+      <span>{name}</span>
+    </div>
+    <div class="script-info">
+      <Link
+        href={`https://github.com/RepolloDev/Problemas-del-Juez-Patito/tree/main/${path}`}
+        >{path}</Link
+      >
+    </div>
+  </div>
+  <div class="code-container">
+    <div set:html={html} />
+  </div>
+</div>
+<style>
+  .code-presentation {
+    margin-top: 2.5rem;
+    background-color: var(--color-base-100);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    border: 1.5px solid var(--color-border);
+  }
+
+  .code-header {
+    display: flex;
+    padding: 0.25rem 0.5rem;
+    gap: 1rem;
+    background-color: var(--color-base-200);
+    border-bottom: 1.5px solid var(--color-border);
+  }
+
+  .code-container {
+    padding: 0.5rem;
+  }
+
+  .language-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-transform: capitalize;
+    padding-right: 0.5rem;
+    border-right: 1.5px solid var(--color-border);
+  }
+
+  .language-info .dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+  }
+</style>

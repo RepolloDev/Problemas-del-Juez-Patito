@@ -1,3 +1,5 @@
+import type { FileExt } from "./utils/languages";
+
 export interface MetaData {
   // all properties are always arrays
   tags: string[];
@@ -13,7 +15,7 @@ export interface ScriptData extends MetaData {
   id: string;
   name: string;
   url: string;
-  extension: string;
+  extension: FileExt;
   filename: string;
   path: string;
   content: ScriptContent;

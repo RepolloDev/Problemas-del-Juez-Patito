@@ -1,0 +1,155 @@
+---
+import Search from "./Search.astro";
+import { Icon } from "astro-icon/components";
+
+const options = [
+  { name: "Inicio", href: "/" },
+  { name: "Problemas", href: "/problems" },
+  { name: "Tags", href: "/tags" },
+];
+---
+
+<header>
+  <span class="hambuguer-button">
+    <Icon name="three-bars" size={16} />
+  </span>
+  <div>
+    <a href="/" class="logo"> JPP </a>
+  </div>
+  <nav class="options">
+    <ul>
+      {
+        options.map(({ name, href }) => (
+          <li>
+            <a class="ref" href={href}>
+              {name}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+  <div class="search-box">
+    <Search />
+  </div>
+  <div class="links">
+    <a
+      target="_blank"
+      class="ref"
+      href="https://github.com/RepolloDev/Problemas-del-Juez-Patito"
+    >
+      <Icon name="github" size={24} />
+    </a>
+  </div>
+</header>
+
+<style>
+  header {
+    display: flex;
+    position: sticky;
+    top: 0;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--color-base-300);
+    color: white;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1.5px solid var(--color-border);
+  }
+
+  .hambuguer-button {
+    background-color: transparent;
+    color: var(--color-text-secondary);
+    outline: 1px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text);
+    text-decoration: none;
+    user-select: none;
+  }
+  .options {
+    display: none;
+  }
+
+  .options ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+  }
+
+  .options li {
+    margin-right: 1rem;
+  }
+
+  .ref {
+    color: var(--color-text);
+    text-decoration: none;
+  }
+
+  .ref:hover {
+    color: var(--color-text-secondary);
+    text-decoration: underline;
+  }
+
+  .links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .links a {
+    display: flex;
+    align-items: center;
+  }
+
+  .search-box {
+    margin-left: auto;
+  }
+
+  @media (max-width: 768px) {
+    .absolute-options {
+      display: flex;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: var(--color-base-300);
+      border: 1.5px solid var(--color-border);
+      border-radius: 0.3rem;
+    }
+
+    .absolute-options ul {
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+      gap: 1rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .hambuguer-button {
+      display: none;
+    }
+
+    .options {
+      display: flex;
+    }
+  }
+</style>
+
+<script>
+  const hambuguerButton = document.querySelector(".hambuguer-button");
+  const options = document.querySelector(".options");
+
+  hambuguerButton?.addEventListener("click", () => {
+    options?.classList.toggle("absolute-options");
+  });
+</script>

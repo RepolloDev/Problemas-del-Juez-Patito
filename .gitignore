@@ -1,8 +1,7 @@
 test
-web
 node_modules
 bun.lockb
 
 src/cli/temp
-
 src/data/*.json
+.astro

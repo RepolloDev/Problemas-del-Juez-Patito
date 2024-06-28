@@ -1,0 +1,136 @@
+---
+import type { GetStaticPaths } from "astro";
+import PageLayout from "@/web/layouts/PageLayout.astro";
+import { UseScriptDB } from "@/data";
+import type { ScriptData } from "@/data/types";
+import ParseCode from "../../../components/ParseCode.astro";
+import ParseMark from "../../../components/ParseMark.astro";
+// styles for callouts github
+import "remark-callouts/styles.css";
+
+export const getStaticPaths = (() => {
+  return UseScriptDB.data.map((item) => ({
+    params: { id: item.id },
+  }));
+}) satisfies GetStaticPaths;
+
+const { id } = Astro.params;
+const { name, tags, extension, path, url, content } = UseScriptDB.data.find(
+  (item) => item.id === id
+) as ScriptData;
+
+const { description, steps, code } = content;
+---
+
+<PageLayout>
+  <div class="presentation">
+    <div class="title">
+      <h1>{name}</h1>
+      <span class="badge">#{id}</span>
+    </div>
+    <div class="tags">
+      {tags.map((tag) => <a href={`/tags#${tag}`}>{tag}</a>)}
+    </div>
+    <div class="actions">
+      <a
+        class="github"
+        href={`https://github.com/RepolloDev/Problemas-del-Juez-Patito/tree/main/${path}`}
+      >
+        Ver en Github
+      </a>
+      <a class="juez" href={url}> Ver en el Juez </a>
+    </div>
+  </div>
+  <article>
+    <ParseMark content={description} />
+    <ParseMark content={steps} />
+    <ParseCode content={code} extension={extension} path={path} />
+  </article>
+</PageLayout>
+
+<style>
+  :root {
+    --callout-bg-color: #f0f0f005;
+  }
+
+  .presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .presentation .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .presentation .title h1 {
+    font-size: 2rem;
+    margin-bottom: 0;
+  }
+
+  .presentation .badge {
+    border: 1px solid var(--color-border);
+    padding: 0.25rem;
+    border-radius: 0.5rem;
+    color: var(--color-text-secondary);
+    font-size: small;
+  }
+
+  .presentation .tags {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .presentation .tags a {
+    border-radius: 0.5rem;
+    background-color: var(--color-accend-dark);
+    color: var(--color-accent);
+    padding: 0.25rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .presentation .tags a:hover {
+    background-color: var(--color-accent);
+    color: var(--color-text);
+  }
+
+  .presentation .actions {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .presentation .actions a {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: bold;
+  }
+
+  .presentation .actions .github {
+    color: var(--color-text);
+    background-color: #238636;
+  }
+
+  .presentation .actions .github:hover {
+    background-color: rgb(48, 169, 70);
+  }
+
+  .presentation .actions .juez {
+    color: var(--color-text);
+    background-color: #793fc7;
+  }
+
+  .presentation .actions .juez:hover {
+    background-color: #9659df;
+  }
+</style>

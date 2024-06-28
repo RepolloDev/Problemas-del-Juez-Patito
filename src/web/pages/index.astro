@@ -1,0 +1,73 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import { UseScriptDB } from "@/data";
+import Card from "../components/Card.astro";
+import type { ScriptData } from "@/data/types";
+
+const lastData = UseScriptDB.data.slice(-10);
+---
+
+<PageLayout>
+  <section>
+    <article>
+      <h1>Problemas del Juez Patito 🔨🦆</h1>
+      <img
+        class="banner"
+        width="855"
+        height="200"
+        alt="Banner de Problemas del Juez Patito"
+        src="https://raw.githubusercontent.com/RepolloDev/Problemas-del-Juez-Patito/main/assets/banner.png"
+      />
+      <p>
+        Este repositorio contiene la solución a los problemas del juez patito,
+        una plataforma de problemas de la <i>Universidad Mayor de San Andrés</i
+        >. Los problemas están resueltos únicamente en Python pero se dejan
+        explicaciones detalladas de los problemas para que puedan ser resueltos
+        en otros lenguajes de programación.
+      </p>
+    </article>
+  </section>
+  <section>
+    <h2>Ultimos Scripts</h2>
+    <div class="card-container">
+      {
+        lastData.map((item) => {
+          const { id, name, extension, path, tags, url } = item as ScriptData;
+          return (
+            <Card
+              id={id}
+              name={name}
+              url={url}
+              extension={extension}
+              path={path}
+              tags={tags}
+            />
+          );
+        })
+      }
+    </div>
+  </section>
+</PageLayout>
+
+<style>
+  .banner {
+    border-radius: 0.5rem;
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+
+  .card-container {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+  }
+
+  @media (min-width: 1024px) {
+    .card-container {
+      display: grid;
+      grid-template-columns: 50% 50%;
+    }
+  }
+</style>

@@ -5,13 +5,17 @@
     "data:build": "tsx ./src/data/scripts/build.ts",
     "data:delete": "tsx ./src/data/scripts/delete.ts",
     "data:rebuild": "tsx ./src/data/scripts/rebuild.ts",
-    "cli": "tsx ./src/cli/index.ts"
+    "cli": "tsx ./src/cli/index.ts",
+    "build": "npm run data:rebuild && astro build",
+    "dev": "astro dev",
+    "preview": "astro preview"
   },
   "devDependencies": {
     "@types/console-clear": "^1.1.4",
     "@types/inquirer": "^9.0.7",
     "@types/node": "^20.14.8",
     "@types/shelljs": "^0.8.15",
+    "astro": "^4.11.3",
     "chalk": "^5.3.0",
     "inquirer": "^9.2.23",
     "inquirer-autocomplete-standalone": "^0.8.1",
@@ -28,8 +32,13 @@
     "unified": "^11.0.5"
   },
   "dependencies": {
+    "@fontsource-variable/fira-code": "^5.0.18",
+    "@fontsource/geist-sans": "^5.0.3",
+    "astro-icon": "^1.1.0",
     "console-clear": "^1.1.1",
     "flexsearch": "^0.7.43",
-    "lowdb": "^7.0.1"
+    "handlebars": "^4.7.8",
+    "lowdb": "^7.0.1",
+    "normalize.css": "^8.0.1"
   }
 }

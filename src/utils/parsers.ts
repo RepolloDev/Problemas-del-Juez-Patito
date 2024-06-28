@@ -13,6 +13,7 @@ export const codeProcessor = unified()
   .use(rehypePrettyCode, {
     theme: "github-dark",
     defaultLang: "plaintext",
+    keepBackground: false,
   })
   .use(rehypeStringify);
 

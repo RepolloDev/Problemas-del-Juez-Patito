@@ -1,0 +1,4 @@
+build
+.astro
+node_modules
+env.d.ts

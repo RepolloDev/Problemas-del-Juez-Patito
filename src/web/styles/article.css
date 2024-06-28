@@ -1,0 +1,10 @@
+article h1 {
+  font-size: 2em;
+  text-align: center;
+  font-weight: bold;
+  text-wrap: pretty;
+}
+
+article p {
+  text-wrap: pretty;
+}

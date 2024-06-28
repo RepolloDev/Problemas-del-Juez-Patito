@@ -1,0 +1,12 @@
+---
+import { markdownHTML } from "@/utils/parsers";
+
+interface Props {
+  content: string;
+}
+
+const { content } = Astro.props;
+const html = await markdownHTML(content);
+---
+
+<div set:html={html} />
