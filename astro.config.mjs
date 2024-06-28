@@ -13,4 +13,6 @@ export default defineConfig({
       iconDir: "./src/web/assets/icons", include: ["**/*.svg"], output: "./src/web/build/icons"
     })
   ],
+  site: "https://repollodev.github.io",
+  base: "Problemas-del-Juez-Patito"
 });
