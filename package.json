@@ -3,9 +3,9 @@
   "type": "module",
   "scripts": {
     "data:build": "tsx ./src/data/scripts/build.ts",
-    "format": "prettier . --write",
     "data:delete": "tsx ./src/data/scripts/delete.ts",
     "data:rebuild": "tsx ./src/data/scripts/rebuild.ts",
+    "format": "prettier . --write",
     "cli": "tsx ./src/cli/index.ts",
     "build": "npm run data:rebuild && astro build",
     "dev": "astro dev",
