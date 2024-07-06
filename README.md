@@ -10,7 +10,7 @@
         <img alt="Python" src="https://img.shields.io/badge/Juez Patito-4285F4.svg?style=for-the-badge&logo=GoogleChrome&logoColor=white"/>
     </a>
     <a href="https://repollodev.github.io/Problemas-del-Juez-Patito/">
-        <img alt="Python" src="https://img.shields.io/badge/Página estatica-121011.svg?style=for-the-badge&logo=github&logoColor=white"/>
+        <img alt="Python" src="https://img.shields.io/badge/Página estática-121011.svg?style=for-the-badge&logo=github&logoColor=white"/>
     </a>
 </p>
 
