@@ -7,7 +7,7 @@ const defaultData: MetaDataDB = emptyMetaData;
 
 export const metaDB = await JSONFilePreset<MetaDataDB>(
   metaJSONPath,
-  defaultData
+  defaultData,
 );
 
 export class UseMetaDB {

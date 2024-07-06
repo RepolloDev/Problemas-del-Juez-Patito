@@ -20,7 +20,7 @@ export async function getAllFilesPaths() {
   }
 
   return filePaths.filter((file) =>
-    isValidExt(file.split(".").pop() as string)
+    isValidExt(file.split(".").pop() as string),
   );
 }
 

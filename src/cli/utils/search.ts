@@ -11,7 +11,7 @@ export default async function search() {
         name: `[${item.id}] - ${item.name}`,
         value: item,
         description: chalk.blue(
-          `🗂️ Este archivo esta ubicado en /${item.path}`
+          `🗂️ Este archivo esta ubicado en /${item.path}`,
         ),
       }));
     },

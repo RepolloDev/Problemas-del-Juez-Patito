@@ -31,7 +31,11 @@ const { name: langName, color: langColor } = getLanguageByExt(extension);
       <p>{name}</p>
     </div>
     <div class="tags">
-      {tags.map((tag) => <a href={`/Problemas-del-Juez-Patito/tags/#${tag}`}>{tag}</a>)}
+      {
+        tags.map((tag) => (
+          <a href={`/Problemas-del-Juez-Patito/tags/#${tag}`}>{tag}</a>
+        ))
+      }
     </div>
     <div class="details">
       <span class="language">

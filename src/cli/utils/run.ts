@@ -44,14 +44,14 @@ async function runPythonScript(scriptPath: string): Promise<string> {
 export default async function run(data: ScriptData) {
   // mensaje de bienvenida
   const inputMessage = chalk.green.bold.underline(
-    `🎹 Ingrese los datos para el script\n`
+    `🎹 Ingrese los datos para el script\n`,
   );
   console.log(inputMessage);
 
   // ejecutar el script y mostrar el resultado
   const output = await runPythonScript(data.path);
   const outputMessage = chalk.blue.bold.underline(
-    `\n🚀 Resultado del script\n`
+    `\n🚀 Resultado del script\n`,
   );
   console.log(outputMessage);
   console.log(fs.readFileSync(output, "utf-8"));

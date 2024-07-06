@@ -10,7 +10,7 @@ import { getLanguageByExt, type FileExt } from "./languages";
  */
 export function formatScriptContent(
   content: string,
-  ext: FileExt
+  ext: FileExt,
 ): ScriptContent {
   const { name: langName } = getLanguageByExt(ext);
   const descRegex = /"""description[\r\n]+([\s\S]*?)[\r\n]+"""/g;

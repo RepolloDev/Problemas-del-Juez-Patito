@@ -84,7 +84,7 @@ export async function getFileInfo(value: string | PathInfo): Promise<FileInfo> {
 }
 
 export async function getFileData(
-  value: string | FileInfo
+  value: string | FileInfo,
 ): Promise<ScriptData> {
   const data = typeof value === "string" ? await getFileInfo(value) : value;
   const { content, extension } = data;

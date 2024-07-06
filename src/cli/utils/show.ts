@@ -17,10 +17,10 @@ export function showFull(data: ScriptData) {
   console.log("- " + chalk.bold(`Ruta: `) + chalk.blueBright(path));
   console.log("- " + chalk.bold(`Extensión: `) + chalk.blueBright(extension));
   console.log(
-    "- " + chalk.bold(`Nombre del archivo: `) + chalk.blueBright(filename)
+    "- " + chalk.bold(`Nombre del archivo: `) + chalk.blueBright(filename),
   );
   console.log(
-    "- " + chalk.bold(`Etiquetas: `) + chalk.blueBright(tags.join(", "))
+    "- " + chalk.bold(`Etiquetas: `) + chalk.blueBright(tags.join(", ")),
   );
   console.log("- " + chalk.bold(`URL: `) + chalk.blueBright(url));
 }

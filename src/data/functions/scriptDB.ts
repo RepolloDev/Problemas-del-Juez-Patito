@@ -7,7 +7,7 @@ const defaultData: ScriptDataDB = [];
 
 export const scriptDB = await JSONFilePreset<ScriptDataDB>(
   scriptsJSONPath,
-  defaultData
+  defaultData,
 );
 
 // if (scriptsDB.data.length <= 1) {

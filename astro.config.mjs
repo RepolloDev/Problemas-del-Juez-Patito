@@ -1,5 +1,5 @@
 import { defineConfig } from "astro/config";
-import icon from "astro-icon"
+import icon from "astro-icon";
 
 export default defineConfig({
   srcDir: "./src/web",
@@ -13,8 +13,8 @@ export default defineConfig({
       iconDir: "./src/web/assets/icons",
       include: ["**/*.svg"],
       //output: "./src/web/build/icons"
-    })
+    }),
   ],
   site: "https://repollodev.github.io",
-  base: "Problemas-del-Juez-Patito"
+  base: "Problemas-del-Juez-Patito",
 });
