@@ -9,3 +9,9 @@ export function removeInlineComments(text: string, ext: FileExt) {
   const { comment } = getLanguageByExt(ext);
   return text?.replace(comment, "").trim().replace(/\n/g, "");
 }
+
+export function removeManyInlineComments(text: string, ext: FileExt) {
+  const { comment } = getLanguageByExt(ext);
+  const comments = text.split("\n").map((line) => line.replace(comment, ""));
+  return comments.join("\n").trim();
+}

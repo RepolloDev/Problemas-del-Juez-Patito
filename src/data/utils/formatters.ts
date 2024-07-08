@@ -1,5 +1,6 @@
 import type { ScriptContent } from "@/data/types";
 import { getLanguageByExt, type FileExt } from "./languages";
+import { removeManyInlineComments } from "./removers";
 
 /**
  * Formats the content of a script file.
@@ -13,11 +14,19 @@ export function formatScriptContent(
   ext: FileExt,
 ): ScriptContent {
   const { name: langName } = getLanguageByExt(ext);
-  const descRegex = /"""description[\r\n]+([\s\S]*?)[\r\n]+"""/g;
-  const stepsRegex = /"""steps[\r\n]+([\s\S]*?)[\r\n]+"""/g;
+  // const descRegex = /"""description[\r\n]+([\s\S]*?)[\r\n]+"""/g;
+  const descRegex = /# description[\r\n]+((?:#[^\n]*\n)+)/;
+  // const stepsRegex = /"""steps[\r\n]+([\s\S]*?)[\r\n]+"""/g;
+  const stepsRegex = /# steps[\r\n]+((?:#[^\n]*\n)+)/;
 
-  const description = descRegex.exec(content)?.[1] || "";
-  const steps = stepsRegex.exec(content)?.[1] || "";
+  const description = removeManyInlineComments(
+    descRegex.exec(content)?.[1] || "",
+    ext,
+  );
+  const steps = removeManyInlineComments(
+    stepsRegex.exec(content)?.[1] || "",
+    ext,
+  );
   const codeReplaced = content
     .replace(descRegex, "")
     .replace(stepsRegex, "")

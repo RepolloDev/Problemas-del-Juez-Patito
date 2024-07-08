@@ -6,6 +6,7 @@ import remarkMath from "remark-math";
 import { unified } from "unified";
 import callouts from "remark-callouts";
 import rehypePrettyCode from "rehype-pretty-code";
+import remarkGfm from "remark-gfm";
 
 export const codeProcessor = unified()
   .use(remarkParse)
@@ -19,6 +20,7 @@ export const codeProcessor = unified()
 
 export const markdownProcessor = unified()
   .use(remarkParse)
+  .use(remarkGfm)
   .use(callouts)
   .use(remarkMath)
   .use(remarkRehype)

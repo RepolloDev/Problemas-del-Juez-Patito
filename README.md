@@ -84,20 +84,18 @@ Los scripts de Python a parte de tener el código para resolver el problema, tam
 # [Link del problema]
 # tag1 tag2 tag3-con-espacios
 
-"""description
-El contenido de la descripción del problema
-con imagenes o algun contexto necesario para
-poder resolver el problema
-"""
+# description
+# El contenido de la descripción del problema
+# con imagenes o algun contexto necesario para
+# poder resolver el problema
 
-"""steps
-En aquí se describe los pasos algoritmicos
-que se sigue para poder resolver el problemas
-
-1. leer datos en la variable `N`
-2. hacer algo con `N`
-3. ...
-"""
+# steps
+# En aquí se describe los pasos algoritmicos
+# que se sigue para poder resolver el problemas
+#
+# 1. leer datos en la variable `N`
+# 2. hacer algo con `N`
+# 3. ...
 
 print("Hola mundo")
 ```
