@@ -3,26 +3,24 @@
 # https://jv.umsa.bo/oj/problem.php?id=1008
 # busqueda ordenamiento listas cadenas bucles facil
 
-"""description
-El problema consiste en busqueda y ordenamiento de elementos en una lista de archivos,
-donde es solo hay que buscar los elementos "." y ".." y colocarlos al final de la lista.
+# description
+# El problema consiste en busqueda y ordenamiento de elementos en una lista de archivos,
+# donde es solo hay que buscar los elementos "." y ".." y colocarlos al final de la lista.
+#
+# > [!note] Nota
+# > Al intercambiar el elemento "." o ".." con el último elemento de la lista,
+# > se debe decrementar el índice del último elemento de la lista para no volver
+# > a intercambiar el mismo elemento.
 
-> [!note] Nota
-> Al intercambiar el elemento "." o ".." con el último elemento de la lista,
-> se debe decrementar el índice del último elemento de la lista para no volver
-> a intercambiar el mismo elemento.
-"""
-
-"""steps
-1. Obtener los casos de prueba `T``
-2. Por cada caso de prueba obtener el número de archivos `N`
-3. Por cada caso de prueba leer y guardar los nombres de los archivos
-4. Buscar "." o ".." en la lista de archivos
-5. Verificar si "." y ".." son los últimos elementos de la lista (en cualquier orden)
-    - Si es así mostrar "Caso [i]" y listar los archivos
-    - Si no, buscar "." o ".." e intercambiarlos con el último elemento de la lista
-    - Repetir el paso 5, pero ahora con el penúltimo elemento de la lista
-"""
+# steps
+# 1. Obtener los casos de prueba `T``
+# 2. Por cada caso de prueba obtener el número de archivos `N`
+# 3. Por cada caso de prueba leer y guardar los nombres de los archivos
+# 4. Buscar "." o ".." en la lista de archivos
+# 5. Verificar si "." y ".." son los últimos elementos de la lista (en cualquier orden)
+#     - Si es así mostrar "Caso [i]" y listar los archivos
+#     - Si no, buscar "." o ".." e intercambiarlos con el último elemento de la lista
+#     - Repetir el paso 5, pero ahora con el penúltimo elemento de la lista
 
 
 def verifyFiles(fileList):

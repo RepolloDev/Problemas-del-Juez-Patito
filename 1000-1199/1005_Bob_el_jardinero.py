@@ -3,17 +3,15 @@
 # https://jv.umsa.bo/oj/problem.php?id=1005
 # facil matematicas bucles condicionales
 
-"""description
-> [!important] Incompleto
-> La solución está incompleta, se necesita mostrar dos decimales, no redondear a dos decimales
-"""
+# description
+# > [!important] Incompleto
+# > La solución está incompleta, se necesita mostrar dos decimales, no redondear a dos decimales
 
-"""steps
-1. Obtener el número de casos de prueba `T`
-2. Recibir un string para cada caso de prueba
-3. Contar las vocales en cada string
-4. Calcular el porcentaje de cada vocal `(vocal * 100 / total)`
-"""
+# steps
+# 1. Obtener el número de casos de prueba `T`
+# 2. Recibir un string para cada caso de prueba
+# 3. Contar las vocales en cada string
+# 4. Calcular el porcentaje de cada vocal `(vocal * 100 / total)`
 
 T = int(input())
 for k in range(1, T + 1):

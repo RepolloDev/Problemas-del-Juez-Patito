@@ -3,22 +3,20 @@
 # https://jv.umsa.bo/oj/problem.php?id=1011
 # matematicas bucles facil
 
-"""description
-Para este caso es necesario utilizar la fórmula de la distancia
-entre dos puntos en un plano cartesiano.
+# description
+# Para este caso es necesario utilizar la fórmula de la distancia
+# entre dos puntos en un plano cartesiano.
+#
+# $$
+# d = \sqrt{(x_1 - x_2)^2 + (y_1 - y_2)^2}
+# $$
 
-$$
-Distancia = \\sqrt{(x_1 - x_2)^2 + (y_1 - y_2)^2}
-$$
-"""
-
-"""steps
-1. Recibir el número (`N`) de jugadores del equipo
-2. Por cada jugador, recibir las coordenadas `x`, `y`
-3. Recibir el número de consultas `Q`
-4. Por cada consulta, recibir los jugadores a operar
-5. Calcular la distancia entre los jugadores
-"""
+# steps
+# 1. Recibir el número (`N`) de jugadores del equipo
+# 2. Por cada jugador, recibir las coordenadas `x`, `y`
+# 3. Recibir el número de consultas `Q`
+# 4. Por cada consulta, recibir los jugadores a operar
+# 5. Calcular la distancia entre los jugadores
 
 N = int(input())
 

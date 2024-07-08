@@ -3,27 +3,25 @@
 # https://jv.umsa.bo/oj/problem.php?id=1021
 # grafos arboles recorrido medio bucles condicionales matematicas
 
-"""description
-Para este caso es necesario generar un árbol binario basado en lo siguiente:
+# description
+# Para este caso es necesario generar un árbol binario basado en lo siguiente:
+#
+# - La raíz del árbol es el nodo 1
+# - Para cualquier nodo `x`, su hijo izquierdo es `2 * x` y su hijo derecho es `2 * x + 1`
+#
+# TODO: Agregar un ejemplo del árbol generado
+#
+# La solución es más matemática que nada, pues por la naturaleza del árbol,
+# se puede obtener el nodo padre de cualquier nodo `x` con la fórmula `x // 2`.
+# La idea es obtener los padres de ambos hasta que ambos tengan el mismo padre.
 
-- La raíz del árbol es el nodo 1
-- Para cualquier nodo `x`, su hijo izquierdo es `2 * x` y su hijo derecho es `2 * x + 1`
-
-TODO: Agregar un ejemplo del árbol generado
-
-La solución es más matemática que nada, pues por la naturaleza del árbol,
-se puede obtener el nodo padre de cualquier nodo `x` con la fórmula `x // 2`.
-La idea es obtener los padres de ambos hasta que ambos tengan el mismo padre.
-"""
-
-"""steps
-1. Recibir datos indefinidamente hasta que se reciba una línea en blanco
-2. Por cada linea, se recibe dos números `v` y `w` que representan dos nodos del árbol
-3. Obtener el nivel de los nodos `v` y `w` en el árbol
-4. Mover el nodo de mayor nivel hacia arriba hasta que ambos nodos tengan el mismo nivel
-5. Mover ambos nodos hacia arriba hasta que ambos nodos tengan el mismo padre
-6. Imprimir el nodo padre común más bajo
-"""
+# steps
+# 1. Recibir datos indefinidamente hasta que se reciba una línea en blanco
+# 2. Por cada linea, se recibe dos números `v` y `w` que representan dos nodos del árbol
+# 3. Obtener el nivel de los nodos `v` y `w` en el árbol
+# 4. Mover el nodo de mayor nivel hacia arriba hasta que ambos nodos tengan el mismo nivel
+# 5. Mover ambos nodos hacia arriba hasta que ambos nodos tengan el mismo padre
+# 6. Imprimir el nodo padre común más bajo
 
 import sys
 

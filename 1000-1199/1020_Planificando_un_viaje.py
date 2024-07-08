@@ -3,28 +3,26 @@
 # https://jv.umsa.bo/oj/problem.php?id=1020
 # facil listas bucles condicionales
 
-"""description
-> [!note] Nota
-> Muy aparte de la difucultad para ingresar datos,
-> resaltar que el problema se basa en saber la cantidad de camas
-> disponibles en un hotel y su precio, para saber si es posible
-> alojar a todos los participantes.
-"""
+# description
+# > [!note] Nota
+# > Muy aparte de la difucultad para ingresar datos,
+# > resaltar que el problema se basa en saber la cantidad de camas
+# > disponibles en un hotel y su precio, para saber si es posible
+# > alojar a todos los participantes.
 
-"""steps
-1. Recibir los casos de prueba hasta que ya no haya datos
-2. Recibir una linea con los siguientes datos:
-    - `N`: número de participantes
-    - `P`: presupuesto
-    - `H`: número de hoteles
-    - `S`: número de semanas
-3. Por cada hotel, recibir dos lineas
-    - `p`: precio por persona
-    - `camas`: linea de camas disponibles por semana (`S` datos)
-4. Verificar si hay camas disponibles para todos los participantes
-5. Si hay camas disponibles, calcular el precio total si esta dentro del presupuesto
-6. Si hay precios válidos, imprimir el menor precio, sino, imprimir "quedarse en casa"
-"""
+# steps
+# 1. Recibir los casos de prueba hasta que ya no haya datos
+# 2. Recibir una linea con los siguientes datos:
+#     - `N`: número de participantes
+#     - `P`: presupuesto
+#     - `H`: número de hoteles
+#     - `S`: número de semanas
+# 3. Por cada hotel, recibir dos lineas
+#     - `p`: precio por persona
+#     - `camas`: linea de camas disponibles por semana (`S` datos)
+# 4. Verificar si hay camas disponibles para todos los participantes
+# 5. Si hay camas disponibles, calcular el precio total si esta dentro del presupuesto
+# 6. Si hay precios válidos, imprimir el menor precio, sino, imprimir "quedarse en casa"
 
 import sys
 

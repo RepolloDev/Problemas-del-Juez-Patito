@@ -3,17 +3,15 @@
 # https://jv.umsa.bo/oj/problem.php?id=1019
 # facil matematicas condicionales
 
-"""description
-Este problema es muy simple, pues hay que obtener el valor
-medio de entre tres números, pero para hacerlo de forma
-más sencilla se utiliza una lista.
-"""
+# description
+# Este problema es muy simple, pues hay que obtener el valor
+# medio de entre tres números, pero para hacerlo de forma
+# más sencilla se utiliza una lista.
 
-"""steps
-1. Recibir el número de casos de prueba `T`
-2. Por cada caso, recibir los números `a`, `b` y `c` en la lista `salaries`
-3. Obtener el valor medio de la lista
-"""
+# steps
+# 1. Recibir el número de casos de prueba `T`
+# 2. Por cada caso, recibir los números `a`, `b` y `c` en la lista `salaries`
+# 3. Obtener el valor medio de la lista
 
 T = int(input())
 for i in range(T):

@@ -3,31 +3,29 @@
 # https://jv.umsa.bo/oj/problem.php?id=1025
 # facil hashmap matematicas bucles condicionales
 
-"""description
-Para este ejercicio se hace uso del concepto de distancia
-entre puntos en un plano cartesiano.
+# description
+# Para este ejercicio se hace uso del concepto de distancia
+# entre puntos en un plano cartesiano.
+#
+# $$
+# d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}
+# $$
+#
+# > [!note] Nota
+# > En el código se utiliza el valor `min_distance = maxsize` para
+# > inicializar la variable que guardará la distancia minima,
+# > inicialmente es el valor máximo posible para que puede ser
+# > reemplazado por cualquier valor menor.
 
-$$
-d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}
-$$
-
-> [!note] Nota
-> En el código se utiliza el valor `min_distance = maxsize` para
-> inicializar la variable que guardará la distancia minima,
-> inicialmente es el valor máximo posible para que puede ser
-> reemplazado por cualquier valor menor.
-"""
-
-"""steps
-1. Recibir la cantidad de puntos `N` en la pantalla
-2. Recibir `N` lineas de entrada, donde cada linea tiene los valores `x` `y` `color`
-3. Castear los valores `x` y `y` a enteros y el color a string
-4. Guardar los valores en un diccionario, donde la clave es el color y el valor es una lista de tuplas con las coordenadas
-5. Ordenar el diccionario por clave
-6. Iterar sobre el diccionario
-7. Por cada color, calcular la distancia minima entre la lista de coordenadas
-8. Imprimir el color y la distancia minima
-"""
+# steps
+# 1. Recibir la cantidad de puntos `N` en la pantalla
+# 2. Recibir `N` lineas de entrada, donde cada linea tiene los valores `x` `y` `color`
+# 3. Castear los valores `x` y `y` a enteros y el color a string
+# 4. Guardar los valores en un diccionario, donde la clave es el color y el valor es una lista de tuplas con las coordenadas
+# 5. Ordenar el diccionario por clave
+# 6. Iterar sobre el diccionario
+# 7. Por cada color, calcular la distancia minima entre la lista de coordenadas
+# 8. Imprimir el color y la distancia minima
 
 from sys import maxsize
 

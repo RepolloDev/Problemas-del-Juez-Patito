@@ -3,25 +3,23 @@
 # https://jv.umsa.bo/oj/problem.php?id=1015
 # matematicas bucles condicionales facil
 
-"""description
-Para este problema únicamente es utilizar la fórmula de la distancia
-entre dos puntosen un plano cartesiano.
+# description
+# Para este problema únicamente es utilizar la fórmula de la distancia
+# entre dos puntosen un plano cartesiano.
+#
+# $$
+# distancia = \sqrt{(x_1 - x_2)^2 + (y_1 - y_2)^2}
+# $$
+#
+# con esta distancia, verificamos si está dentro del radio de la bomba.
 
-$$
-distancia = \sqrt{(x_1 - x_2)^2 + (y_1 - y_2)^2}
-$$
-
-con esta distancia, verificamos si está dentro del radio de la bomba.
-"""
-
-"""steps
-1. Recibir los casos de prueba `T`
-2. Por cada caso de prueba, recibir un entero `N` que es la cantidad de coordenadas
-3. Recibir `N` lineas, dos enteros `x`, `y` que representan las coordenadas de una estructura
-4. Recibir la coordenadas `x`, `y` donde cae la bomba y el radio `r` que cubre la bomba
-5. Calcular la distancia entre la coordenada de la bomba y cada una de las coordenadas de las estructuras
-6. Verificar si la distancia es menor o igual al radio de la bomba
-"""
+# steps
+# 1. Recibir los casos de prueba `T`
+# 2. Por cada caso de prueba, recibir un entero `N` que es la cantidad de coordenadas
+# 3. Recibir `N` lineas, dos enteros `x`, `y` que representan las coordenadas de una estructura
+# 4. Recibir la coordenadas `x`, `y` donde cae la bomba y el radio `r` que cubre la bomba
+# 5. Calcular la distancia entre la coordenada de la bomba y cada una de las coordenadas de las estructuras
+# 6. Verificar si la distancia es menor o igual al radio de la bomba
 
 
 def distance(coord1, coord2):
