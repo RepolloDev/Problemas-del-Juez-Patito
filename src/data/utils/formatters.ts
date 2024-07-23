@@ -31,7 +31,7 @@ export function formatScriptContent(
     .replace(descRegex, "")
     .replace(stepsRegex, "")
     .trim();
-  const code = `\`\`\`${langName}\n${codeReplaced}\n\`\`\``;
+  const code = codeReplaced
 
   return {
     description,

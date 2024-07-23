@@ -1,17 +1,18 @@
 ---
-import { codeHTML } from "@/web/utils/parsers";
-import { getLanguageByExt, type FileExt } from "@/data/utils/languages";
+import { Code as CodeAstro } from "astro:components";
 import Link from "./Link.astro";
+import { getLanguageByExt, type FileExt } from "@/data/utils/languages";
+
 interface Props {
-  content: string;
+  code: string;
   extension: FileExt;
   path: string;
 }
 
-const { content, extension, path } = Astro.props;
-const html = await codeHTML(content);
-
+const { code, path, extension } = Astro.props;
 const { color, name } = getLanguageByExt(extension);
+const codeRepo =
+  "https://github.com/RepolloDev/Problemas-del-Juez-Patito/tree/main";
 ---
 
 <div class="code-presentation">
@@ -21,17 +22,14 @@ const { color, name } = getLanguageByExt(extension);
       <span>{name}</span>
     </div>
     <div class="script-info">
-      <Link
-        href={`https://github.com/RepolloDev/Problemas-del-Juez-Patito/tree/main/${path}`}
-        >{path}</Link
-      >
+      <Link href={`${codeRepo}/${path}`}>{path}</Link>
     </div>
   </div>
   <div class="code-container">
-    <div set:html={html} />
+    <CodeAstro code={code} lang={name} theme="github-dark" />
   </div>
 </div>
-<style>
+<style is:inline>
   .code-presentation {
     margin-top: 2.5rem;
     background-color: var(--color-base-100);
@@ -48,8 +46,24 @@ const { color, name } = getLanguageByExt(extension);
     border-bottom: 1.5px solid var(--color-border);
   }
 
-  .code-container {
-    padding: 0.5rem;
+  .code-container pre {
+    padding: 1rem;
+    margin: 0;
+  }
+
+  .code-container .line {
+    counter-increment: line;
+  }
+
+  .code-container .line::before {
+    content: counter(line);
+    display: inline-block;
+    width: 2rem;
+    padding-right: 1rem;
+    text-align: right;
+    color: var(--color-text-100);
+    user-select: none;
+    opacity: 0.5;
   }
 
   .language-info {

@@ -1,9 +1,9 @@
 ---
 import type { GetStaticPaths } from "astro";
-import Layout from "@/web/components/Layout.astro";
+import Layout from "@/web/components/ui/Layout.astro";
 import { UseScriptDB } from "@/data";
 import type { ScriptData } from "@/data/types";
-import ParseCode from "../../../components/ParseCode.astro";
+import Code from "@/web/components/article/Code.astro";
 import ParseMark from "../../../components/ParseMark.astro";
 // styles for callouts github
 import "remark-callouts/styles.css";
@@ -48,7 +48,7 @@ const { description, steps, code } = content;
   <article>
     <ParseMark content={description} />
     <ParseMark content={steps} />
-    <ParseCode content={code} extension={extension} path={path} />
+    <Code code={code} extension={extension} path={path}/>
   </article>
 </Layout>
 
