@@ -1,6 +1,6 @@
 ---
 import type { GetStaticPaths } from "astro";
-import PageLayout from "@/web/layouts/PageLayout.astro";
+import Layout from "@/web/components/Layout.astro";
 import { UseScriptDB } from "@/data";
 import type { ScriptData } from "@/data/types";
 import ParseCode from "../../../components/ParseCode.astro";
@@ -22,7 +22,7 @@ const { name, tags, extension, path, url, content } = UseScriptDB.data.find(
 const { description, steps, code } = content;
 ---
 
-<PageLayout>
+<Layout>
   <div class="presentation">
     <div class="title">
       <h1>{name}</h1>
@@ -50,7 +50,7 @@ const { description, steps, code } = content;
     <ParseMark content={steps} />
     <ParseCode content={code} extension={extension} path={path} />
   </article>
-</PageLayout>
+</Layout>
 
 <style>
   :root {

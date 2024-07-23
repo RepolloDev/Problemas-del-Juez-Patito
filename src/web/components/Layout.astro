@@ -2,7 +2,8 @@
 import "normalize.css/normalize.css";
 import "@fontsource/geist-sans";
 import "@fontsource-variable/fira-code";
-
+import Header from "./Header.astro";
+import Footer from "./Footer.astro";
 import "../styles/variables.css";
 import "../styles/global.css";
 import "../styles/article.css";
@@ -16,6 +17,10 @@ import "../styles/article.css";
     <title>Document</title>
   </head>
   <body>
-    <slot />
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
   </body>
 </html>

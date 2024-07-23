@@ -1,13 +1,13 @@
 ---
-import PageLayout from "../layouts/PageLayout.astro";
+import Layout from "@/web/components/Layout.astro";
 import { UseScriptDB } from "@/data";
-import Card from "../components/Card.astro";
+import Card from "@/web/components/Card.astro";
 import type { ScriptData } from "@/data/types";
 
 const lastData = UseScriptDB.data.slice(-10);
 ---
 
-<PageLayout>
+<Layout>
   <section>
     <article>
       <h1>Problemas del Juez Patito 🔨🦆</h1>
@@ -47,7 +47,7 @@ const lastData = UseScriptDB.data.slice(-10);
       }
     </div>
   </section>
-</PageLayout>
+</Layout>
 
 <style>
   .banner {
