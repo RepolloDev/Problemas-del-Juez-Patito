@@ -1,7 +1,7 @@
 import { JSONFilePreset } from "lowdb/node";
-import type { MetaDataDB, MetaData } from "../types";
-import { emptyMetaData, listMeta, getAllMeta } from "../utils/metaData";
-import { metaJSONPath } from "../consts";
+import type { MetaDataDB, MetaData } from "@/data/types";
+import { emptyMetaData, listMeta, getAllMeta } from "@/data/utils/metaData";
+import { metaJSONPath } from "@/data/consts";
 
 const defaultData: MetaDataDB = emptyMetaData;
 
@@ -18,7 +18,6 @@ export class UseMetaDB {
   private static async init() {
     if (this.isInit) return;
 
-    // Check if the data is empty
     for (const key of listMeta) {
       if (metaDB.data[key].length <= 1) {
         metaDB.data = await getAllMeta();

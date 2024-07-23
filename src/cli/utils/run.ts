@@ -2,11 +2,11 @@ import { spawn } from "child_process";
 import chalk from "chalk";
 import fs from "fs";
 import path from "path";
-import { __dirname } from "@/utils/paths";
 import type { ScriptData } from "@/data/types";
+import { CLI_DIR } from "@/routes";
 
 async function runPythonScript(scriptPath: string): Promise<string> {
-  const tempDir = path.join(__dirname, "src", "cli", "temp");
+  const tempDir = path.join(CLI_DIR, "temp");
   if (!fs.existsSync(tempDir)) {
     fs.mkdirSync(tempDir, { recursive: true });
   }

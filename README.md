@@ -1,6 +1,6 @@
 <h1 align="center">Problemas del Juez Patito 🔨🦆</h1>
 
-![](./assets/banner.png)
+![](./public/banner.png)
 
 <p align="center">
     <a href="https://www.python.org/">
@@ -121,7 +121,7 @@ Todas estas funciones estan hechas con TypeScript para que sea posible utilizarl
 
 El proyecto tiene la capacidad de generar una página web estática con las soluciones a los problemas, utilizando [AstroJS](https://astro.build/) como generador de sitios estáticos.
 
-![Landing Page](./assets/landing-page.png)
+![Landing Page](./public/landing-page.png)
 
 El proyecto se encuentra en la carpeta `src/web` y se puede ejecutar con el siguiente comando:
 
@@ -144,7 +144,7 @@ El proyecto tiene un CLI para interactuar con el proyecto, se encuentra en la ca
 
 Proximamente se añadirán más opciones al CLI.
 
-![CLI](./assets/cli.png)
+![CLI](./public/cli.png)
 
 Este CLI está construido con [InquirerJS](https://www.npmjs.com/package/inquirer) con algunos plugins para mejorar la experiencia de usuario. Se puede ejecutar con el siguiente comando:
 

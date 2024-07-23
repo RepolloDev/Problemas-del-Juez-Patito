@@ -1,8 +1,3 @@
-test
 node_modules
-bun.lockb
-
-src/cli/temp
-src/data/*.json
+test
 .astro
-dist

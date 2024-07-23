@@ -1,4 +1,3 @@
-import { __dirname } from "@/utils/paths";
 import path from "path";
 import fs from "fs";
 import type { ScriptData } from "@/data/types";

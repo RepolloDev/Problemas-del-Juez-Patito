@@ -1,5 +1,5 @@
-import { __dirname } from "@/utils/paths";
-import { genRange } from "@/utils/genRange";
+import { ROOT_DIR } from "@/routes";
+import { genRange } from "@/data/utils/genRange";
 import fs from "fs";
 import path from "path";
 import { isValidExt } from "./languages";
@@ -8,7 +8,7 @@ import { getFileData } from "./fileParsers";
 export async function getAllFilesPaths() {
   const dirRange = genRange();
   let [a, b] = dirRange.next().value;
-  let dir = path.join(__dirname, `${a}-${b}`);
+  let dir = path.join(ROOT_DIR, `${a}-${b}`);
   const filePaths = [];
 
   while (fs.existsSync(dir)) {
@@ -16,7 +16,7 @@ export async function getAllFilesPaths() {
     const filesConverted = files.map((file) => `${a}-${b}/${file}`);
     filePaths.push(...filesConverted);
     [a, b] = dirRange.next().value;
-    dir = path.join(__dirname, `${a}-${b}`);
+    dir = path.join(ROOT_DIR, `${a}-${b}`);
   }
 
   return filePaths.filter((file) =>

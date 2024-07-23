@@ -5,14 +5,17 @@ export default defineConfig({
   srcDir: "./src/web",
   // ? If not working npm run dev, try to change root to "./src/web"
   //root: "./src/web",
-  //outDir: "./src/web/build",
+  outDir: "./src/web/dist",
   output: "static",
-  publicDir: "./src/web/assets",
+  publicDir: "./public",
+  cacheDir: "./node_modules/.cache/astro",
+  devToolbar: {
+    enabled: false
+  },
   integrations: [
     icon({
       iconDir: "./src/web/assets/icons",
       include: ["**/*.svg"],
-      //output: "./src/web/build/icons"
     }),
   ],
   site: "https://repollodev.github.io",

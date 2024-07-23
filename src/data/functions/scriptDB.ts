@@ -1,7 +1,7 @@
 import { JSONFilePreset } from "lowdb/node";
-import { getAllScriptsData } from "../utils/scriptsData";
-import type { ScriptDataDB } from "../types";
-import { scriptsJSONPath } from "../consts";
+import { getAllScriptsData } from "@/data/utils/scriptsData";
+import type { ScriptDataDB } from "@/data/types";
+import { scriptsJSONPath } from "@/data/consts";
 
 const defaultData: ScriptDataDB = [];
 
@@ -9,11 +9,6 @@ export const scriptDB = await JSONFilePreset<ScriptDataDB>(
   scriptsJSONPath,
   defaultData,
 );
-
-// if (scriptsDB.data.length <= 1) {
-//   scriptsDB.data = await getAllScriptsData();
-//   scriptsDB.write();
-// }
 
 export class UseScriptDB {
   private static isInit = false;

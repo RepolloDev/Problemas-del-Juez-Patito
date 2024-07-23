@@ -1,5 +1,5 @@
 import autocomplete from "inquirer-autocomplete-standalone";
-import searchData from "@/utils/searchData";
+import searchData from "@/cli/utils/searchData";
 import chalk from "chalk";
 
 export default async function search() {
