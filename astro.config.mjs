@@ -13,7 +13,7 @@ export default defineConfig({
   srcDir: "./src/web",
   // ? If not working npm run dev, try to change root to "./src/web"
   //root: "./src/web",
-  outDir: "./src/web/dist",
+  // outDir: "./src/web/dist",
   output: "static",
   publicDir: "./public",
   devToolbar: {
