@@ -1,0 +1,59 @@
+---
+import { getLanguageByExt, type FileExt } from "@/data/utils/languages";
+import { Icon } from "astro-icon/components";
+import Avatar from "./Avatar.astro";
+import Tag from "./Tag.astro";
+import LangColor from "./LangColor.astro";
+
+interface Props {
+  id: string;
+  name: string;
+  url: string;
+  extension: FileExt;
+  path: string;
+  tags: string[];
+}
+
+const { id, name, extension, url, path, tags } = Astro.props;
+---
+
+<div
+  class="card bg-base-200 border-2 border-neutral border-opacity-20 rounded-lg p-4 grid grid-cols-[1fr_auto] gap-4"
+>
+  <div class="body flex flex-col gap-2">
+    <div class="header flex items-center gap-2 break-all text-sm md:text-base">
+      <Avatar seed={id} />
+      <a
+        class="link link-info"
+        href={`/Problemas-del-Juez-Patito/problems/${id}`}>{path}</a
+      >
+    </div>
+    <div class="content flex flex-col gap-4 my-auto py-1">
+      <p>{name}</p>
+      <div class="tags flex flex-wrap gap-2">
+        {
+          tags.map((tag) => (
+            <a href={`/Problemas-del-Juez-Patito/tags/#${tag}`}>
+              <Tag>{tag}</Tag>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+    <div class="details flex justify-between mt-auto text-sm">
+      <LangColor ext={extension} />
+      <span class="id"></span>
+    </div>
+  </div>
+  <div class="actions flex gap-2">
+    <a
+      class="github-link btn btn-xs btn-circle"
+      href={`https://github.com/RepolloDev/Problemas-del-Juez-Patito/tree/main/${path}`}
+    >
+      <Icon name="file-code" size={16} />
+    </a>
+    <a class="cross-reference btn btn-xs btn-circle" href={url}>
+      <Icon name="cross-reference" size={16} />
+    </a>
+  </div>
+</div>

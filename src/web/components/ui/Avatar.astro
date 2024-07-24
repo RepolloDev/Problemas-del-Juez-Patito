@@ -1,0 +1,16 @@
+---
+interface Props {
+  seed: string;
+}
+
+const { seed } = Astro.props;
+---
+
+<div class="avatar w-4">
+  <img
+    class="rounded-full bg-slate-100"
+    width="16"
+    height="16"
+    src={`https://api.dicebear.com/9.x/identicon/svg?seed=${seed}?size=16`}
+  />
+</div>

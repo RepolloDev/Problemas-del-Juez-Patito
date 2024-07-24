@@ -1,7 +1,7 @@
 ---
-import Layout from "@/web/components/ui/Layout.astro";
+import Layout from "@/web/components/common/Layout.astro";
 import { UseScriptDB } from "@/data";
-import Card from "@/web/components/Card.astro";
+import Card from "@/web/components/ui/Card.astro";
 import type { ScriptData } from "@/data/types";
 
 const lastData = UseScriptDB.data.slice(-10);
@@ -9,10 +9,10 @@ const lastData = UseScriptDB.data.slice(-10);
 
 <Layout>
   <section>
-    <article>
-      <h1>Problemas del Juez Patito 🔨🦆</h1>
+    <article class="prose md:prose-lg lg:prose-xl my-8 min-w-full">
+      <h1 class="text-center">Problemas del Juez Patito 🔨🦆</h1>
       <img
-        class="banner"
+        class="banner rounded block w-full"
         width="855"
         height="200"
         alt="Banner de Problemas del Juez Patito"
@@ -28,8 +28,8 @@ const lastData = UseScriptDB.data.slice(-10);
     </article>
   </section>
   <section>
-    <h2>Ultimos Scripts</h2>
-    <div class="card-container">
+    <h2 class="text-2xl md:text-4xl my-8">Ultimos Scripts</h2>
+    <div class="card-container flex flex-col gap-4 md:grid grid-cols-2">
       {
         lastData.map((item) => {
           const { id, name, extension, path, tags, url } = item as ScriptData;
@@ -48,26 +48,3 @@ const lastData = UseScriptDB.data.slice(-10);
     </div>
   </section>
 </Layout>
-
-<style>
-  .banner {
-    border-radius: 0.5rem;
-    display: block;
-    max-width: 100%;
-    width: 100%;
-    height: auto;
-  }
-
-  .card-container {
-    display: flex;
-    gap: 1rem;
-    flex-direction: column;
-  }
-
-  @media (min-width: 1024px) {
-    .card-container {
-      display: grid;
-      grid-template-columns: 50% 50%;
-    }
-  }
-</style>

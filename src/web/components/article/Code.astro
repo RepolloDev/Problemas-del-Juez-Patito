@@ -1,53 +1,40 @@
 ---
 import { Code as CodeAstro } from "astro:components";
-import Link from "./Link.astro";
-import { getLanguageByExt, type FileExt } from "@/data/utils/languages";
+import type { FileExt } from "@/data/utils/languages";
+import LangColor from "../ui/LangColor.astro";
 
 interface Props {
   code: string;
   extension: FileExt;
   path: string;
+  id?: string;
 }
 
-const { code, path, extension } = Astro.props;
-const { color, name } = getLanguageByExt(extension);
+const { code, path, extension, id } = Astro.props;
 const codeRepo =
   "https://github.com/RepolloDev/Problemas-del-Juez-Patito/tree/main";
 ---
 
-<div class="code-presentation">
-  <div class="code-header">
+<div
+  id={id}
+  class="code-presentation mt-12 bg-base-100 overflow-hidden border-[1px] rounded-xl border-neutral border-opacity-50"
+>
+  <div
+    class="code-header flex p-4 gap-4 border-b-[1px] border-neutral border-opacity-50 overflow-hidden whitespace-nowrap text-ellipsis"
+  >
     <div class="language-info">
-      <span style={`background: ${color};`} class="dot"></span>
-      <span>{name}</span>
+      <LangColor ext={extension} />
     </div>
     <div class="script-info">
-      <Link href={`${codeRepo}/${path}`}>{path}</Link>
+      <a class="link link-info" href={`${codeRepo}/${path}`}>{path}</a>
     </div>
   </div>
   <div class="code-container">
-    <CodeAstro code={code} lang={name} theme="github-dark" />
+    <CodeAstro code={code} lang={extension} theme="catppuccin-mocha" />
   </div>
 </div>
 <style is:inline>
-  .code-presentation {
-    margin-top: 2.5rem;
-    background-color: var(--color-base-100);
-    border-radius: 0.5rem;
-    overflow: hidden;
-    border: 1.5px solid var(--color-border);
-  }
-
-  .code-header {
-    display: flex;
-    padding: 0.25rem 0.5rem;
-    gap: 1rem;
-    background-color: var(--color-base-200);
-    border-bottom: 1.5px solid var(--color-border);
-  }
-
   .code-container pre {
-    padding: 1rem;
     margin: 0;
   }
 
@@ -64,20 +51,5 @@ const codeRepo =
     color: var(--color-text-100);
     user-select: none;
     opacity: 0.5;
-  }
-
-  .language-info {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    text-transform: capitalize;
-    padding-right: 0.5rem;
-    border-right: 1.5px solid var(--color-border);
-  }
-
-  .language-info .dot {
-    width: 0.5rem;
-    height: 0.5rem;
-    border-radius: 50%;
   }
 </style>

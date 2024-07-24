@@ -1,12 +1,11 @@
 ---
 import type { GetStaticPaths } from "astro";
-import Layout from "@/web/components/ui/Layout.astro";
+import Layout from "@/web/components/common/Layout.astro";
 import { UseScriptDB } from "@/data";
 import type { ScriptData } from "@/data/types";
 import Code from "@/web/components/article/Code.astro";
-import ParseMark from "../../../components/ParseMark.astro";
-// styles for callouts github
-import "remark-callouts/styles.css";
+import Content from "@/web/components/article/Content.astro";
+import Tag from "@/web/components/ui/Tag.astro";
 
 export const getStaticPaths = (() => {
   return UseScriptDB.data.map((item) => ({
@@ -16,125 +15,51 @@ export const getStaticPaths = (() => {
 
 const { id } = Astro.params;
 const { name, tags, extension, path, url, content } = UseScriptDB.data.find(
-  (item) => item.id === id,
+  (item) => item.id === id
 ) as ScriptData;
 
 const { description, steps, code } = content;
 ---
 
 <Layout>
-  <div class="presentation">
-    <div class="title">
+  <div class="presentation flex flex-col items-center gap-8">
+    <div class="title flex flex-col items-center text-center">
       <h1>{name}</h1>
-      <span class="badge">#{id}</span>
+      <span class="badge badge-neutral font-bold">#{id}</span>
     </div>
-    <div class="tags">
+    <div
+      class="tags flex flex-wrap justify-center w-full md:w-3/4 lg:w-8/12 gap-4"
+    >
       {
         tags.map((tag) => (
-          <a href={`/Problemas-del-Juez-Patito/tags#${tag}`}>{tag}</a>
+          <a href={`/Problemas-del-Juez-Patito/tags#${tag}`}>
+            <Tag>{tag}</Tag>
+          </a>
         ))
       }
     </div>
-    <div class="actions">
+    <div class="actions flex gap-5">
       <a
-        class="github"
+        class="github btn btn-accent md:text-lg"
         href={`https://github.com/RepolloDev/Problemas-del-Juez-Patito/tree/main/${path}`}
       >
         Ver en Github
       </a>
-      <a class="juez" href={url}> Ver en el Juez </a>
+      <a class="juez btn btn-success md:text-lg" href={url}> Ver en el Juez </a>
     </div>
   </div>
-  <article>
-    <ParseMark content={description} />
-    <ParseMark content={steps} />
-    <Code code={code} extension={extension} path={path}/>
+  <article class="prose lg:prose-xl min-w-full">
+    <section>
+      <h2>Descripción</h2>
+      <Content id="description-section" content={description} />
+    </section>
+    <section>
+      <h2>Pasos</h2>
+      <Content id="steps-section" content={steps} />
+    </section>
+    <section>
+      <h2>Código</h2>
+      <Code id="code-section" code={code} extension={extension} path={path} />
+    </section>
   </article>
 </Layout>
-
-<style>
-  :root {
-    --callout-bg-color: #f0f0f005;
-  }
-
-  .presentation {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 2rem;
-  }
-
-  .presentation .title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .presentation .title h1 {
-    font-size: 2rem;
-    margin-bottom: 0;
-  }
-
-  .presentation .badge {
-    border: 1px solid var(--color-border);
-    padding: 0.25rem;
-    border-radius: 0.5rem;
-    color: var(--color-text-secondary);
-    font-size: small;
-  }
-
-  .presentation .tags {
-    width: 80%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.5rem;
-  }
-
-  .presentation .tags a {
-    border-radius: 0.5rem;
-    background-color: var(--color-accend-dark);
-    color: var(--color-accent);
-    padding: 0.25rem;
-    font-size: 0.75rem;
-    font-weight: bold;
-    text-decoration: none;
-  }
-
-  .presentation .tags a:hover {
-    background-color: var(--color-accent);
-    color: var(--color-text);
-  }
-
-  .presentation .actions {
-    display: flex;
-    gap: 1rem;
-  }
-
-  .presentation .actions a {
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
-    text-decoration: none;
-    color: var(--color-text);
-    font-weight: bold;
-  }
-
-  .presentation .actions .github {
-    color: var(--color-text);
-    background-color: #238636;
-  }
-
-  .presentation .actions .github:hover {
-    background-color: rgb(48, 169, 70);
-  }
-
-  .presentation .actions .juez {
-    color: var(--color-text);
-    background-color: #793fc7;
-  }
-
-  .presentation .actions .juez:hover {
-    background-color: #9659df;
-  }
-</style>

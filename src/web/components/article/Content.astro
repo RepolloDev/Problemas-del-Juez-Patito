@@ -1,3 +1,33 @@
 ---
+import { Markdown } from "@astropub/md";
+import "remark-callouts/styles.css";
 
+interface Props {
+  content: string;
+  id?: string;
+}
+
+const { content, id } = Astro.props;
 ---
+
+<div class="markdown-presentation" id={id}>
+  <Markdown of={content} />
+</div>
+
+<style is:inline>
+  :root {
+    --callout-bg-color: #f0f0f005;
+  }
+
+  .markdown-presentation .callout {
+    margin: 0;
+  }
+
+  .markdown-presentation li {
+    padding: 0.2rem 0.2rem 0.2rem 0.5rem;
+  }
+
+  .markdown-presentation ul {
+    list-style: square;
+  }
+</style>

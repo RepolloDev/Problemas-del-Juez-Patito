@@ -1,0 +1,59 @@
+---
+import "normalize.css/normalize.css";
+import "@fontsource/geist-sans";
+import "@fontsource-variable/fira-code";
+import Header from "./Header.astro";
+import Footer from "./Footer.astro";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Better Background -->
+    <div
+      class="fixed top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
+    >
+    </div>
+    <!-- Main Content -->
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style is:global>
+  body {
+    @apply font-geist-sans;
+    @apply overflow-x-hidden;
+  }
+
+  b,
+  strong {
+    @apply text-primary;
+  }
+
+  i {
+    @apply text-accent;
+  }
+
+  code {
+    @apply font-fira-code;
+  }
+
+  main {
+    @apply min-h-screen;
+  }
+
+  header,
+  main,
+  footer {
+    @apply px-4 sm:px-16 md:px-24 lg:px-40 xl:px-56 !important;
+  }
+</style>

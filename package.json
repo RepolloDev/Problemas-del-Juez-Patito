@@ -9,9 +9,11 @@
     "cli": "tsx ./src/cli/index.ts",
     "build": "npm run data:rebuild && astro build",
     "dev": "astro dev",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.13",
     "@types/console-clear": "^1.1.4",
     "@types/inquirer": "^9.0.7",
     "@types/node": "^20.14.8",
@@ -19,6 +21,7 @@
     "astro": "^4.11.3",
     "chalk": "^5.3.0",
     "console-clear": "^1.1.1",
+    "daisyui": "^4.12.10",
     "inquirer": "^9.2.23",
     "inquirer-autocomplete-standalone": "^0.8.1",
     "inquirer-press-to-continue": "^1.2.0",
@@ -26,22 +29,20 @@
     "prettier-plugin-astro": "^0.14.0",
     "rehype-mathjax": "^6.0.0",
     "rehype-pretty-code": "^0.13.2",
-    "rehype-stringify": "^10.0.0",
     "remark-callouts": "^2.0.0",
-    "remark-gfm": "^4.0.0",
     "remark-math": "^6.0.0",
-    "remark-parse": "^11.0.0",
-    "remark-rehype": "^11.1.0",
     "tsx": "^4.15.7",
-    "typescript": "^5.0.0",
-    "unified": "^11.0.5"
+    "typescript": "^5.0.0"
   },
   "dependencies": {
+    "@astrojs/tailwind": "^5.1.0",
+    "@astropub/md": "^0.4.0",
     "@fontsource-variable/fira-code": "^5.0.18",
     "@fontsource/geist-sans": "^5.0.3",
     "astro-icon": "^1.1.0",
     "flexsearch": "^0.7.43",
     "lowdb": "^7.0.1",
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "tailwindcss": "^3.4.6"
   }
 }

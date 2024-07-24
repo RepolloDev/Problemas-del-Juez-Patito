@@ -1,0 +1,15 @@
+---
+import { getLanguageByExt, type FileExt } from "@/data/utils/languages";
+
+interface Props {
+  ext: FileExt;
+}
+
+const { ext } = Astro.props;
+const { name: langName, color: langColor } = getLanguageByExt(ext);
+---
+
+<span class="language flex capitalize items-center gap-2">
+  <span style={`background-color: ${langColor}`} class="dot rounded-full w-2 h-2"></span>
+  <span>{langName}</span>
+</span>
