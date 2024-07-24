@@ -4,14 +4,24 @@ import "@fontsource/geist-sans";
 import "@fontsource-variable/fira-code";
 import Header from "./Header.astro";
 import Footer from "./Footer.astro";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta
+      name="description"
+      content="Más de 1000 problemas algorítmicos realizados en Python. Problemas sacados directamente de la plataforma de una reconocida universidad"
+    />
+    <title>{title}</title>
   </head>
   <body>
     <!-- Better Background -->

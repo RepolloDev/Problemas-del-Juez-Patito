@@ -35,7 +35,7 @@ export default defineConfig({
       [
         rehypePrettyCode,
         {
-          theme: "github-dark",
+          theme: "catppuccin-mocha",
           defaultLang: "bash",
         },
       ],

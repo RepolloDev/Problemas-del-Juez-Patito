@@ -1,0 +1,27 @@
+---
+interface Props {
+  id: string;
+  btnClass?: string;
+  modalClass?: string;
+  boxClass?: string;
+}
+
+const { id, btnClass, modalClass, boxClass } = Astro.props;
+if (id.trim() === "") {
+  throw new Error("id is required, please provide a unique id");
+}
+---
+
+<div>
+  <button onclick={`${id}.showModal()`} class:list={[btnClass]}>
+    <slot name="modal-btn" />
+  </button>
+  <dialog id={id} class="modal" class:list={[modalClass]}>
+    <div class="modal-box" class:list={[boxClass]}>
+      <slot name="modal-box" />
+    </div>
+    <form method="dialog" class="modal-backdrop">
+      <button>close</button>
+    </form>
+  </dialog>
+</div>

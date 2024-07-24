@@ -1,0 +1,21 @@
+---
+import { Icon } from "astro-icon/components";
+interface Props {
+  id: string;
+}
+
+const { id } = Astro.props;
+---
+
+<button
+  class="search-container btn btn-sm border-[1px] rounded-xl border-neutral border-opacity-50 font-normal"
+  onclick={`${id}.showModal()`}
+>
+  <Icon name="search" size={16} />
+  <span class="message hidden sm:inline-block">
+    Type <kbd
+      class="px-1 mx-0.5 border-[1px] rounded border-neutral border-opacity-50"
+      >/</kbd
+    > to search
+  </span>
+</button>
