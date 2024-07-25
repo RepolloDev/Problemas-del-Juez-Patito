@@ -2,45 +2,13 @@
 import Search from "../action/Search.astro";
 import { Icon } from "astro-icon/components";
 import Logo from "../ui/Logo.astro";
-import { BASE_SITE } from "@/routes";
-
-const options = [
-  { name: "Inicio", href: `/${BASE_SITE}/` },
-  { name: "Problemas", href: `/${BASE_SITE}/problems` },
-  { name: "Tags", href: `/${BASE_SITE}/tags` },
-];
 ---
 
 <header
   class="header navbar bg-base-100 bg-opacity-90 sticky top-0 z-50 backdrop-filter backdrop-blur-lg"
 >
   <Logo />
-  <div class="dropdown max-md:order-first md:mx-auto">
-    <div
-      tabindex="0"
-      role="button"
-      aria-label="open navigator menu"
-      class="hambuguer-button md:hidden mr-4"
-    >
-      <Icon name="three-bars" size={24} />
-    </div>
-    <nav class="options max-md:dropdown-content max-md:-left-8">
-      <ul
-        class="menu md:menu-horizontal max-md:bg-base-100 rounded-box z-[1] max-md:w-52 p-2 shadow md:text-lg"
-      >
-        {
-          options.map(({ name, href }) => (
-            <li>
-              <a class="ref" href={href}>
-                {name}
-              </a>
-            </li>
-          ))
-        }
-      </ul>
-    </nav>
-  </div>
-  <div class="actions max-md:ml-auto">
+  <div class="actions ml-auto">
     <Search />
   </div>
   <div class="links ml-2">

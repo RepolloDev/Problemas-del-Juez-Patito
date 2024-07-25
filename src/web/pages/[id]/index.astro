@@ -21,9 +21,7 @@ const { name, tags, extension, path, url, content } = UseScriptDB.data.find(
 const { description, steps, code } = content;
 ---
 
-<Layout
-  title={`JPP - Resolución del problema nro: ${id} - ${name}`}
->
+<Layout title={`JPP - Resolución del problema nro: ${id} - ${name}`}>
   <div class="presentation flex flex-col items-center gap-8">
     <div class="title flex flex-col items-center text-center">
       <h1>{name}</h1>
@@ -32,13 +30,7 @@ const { description, steps, code } = content;
     <div
       class="tags flex flex-wrap justify-center w-full md:w-3/4 lg:w-8/12 gap-4"
     >
-      {
-        tags.map((tag) => (
-          <a href={`/Problemas-del-Juez-Patito/tags#${tag}`}>
-            <Tag>{tag}</Tag>
-          </a>
-        ))
-      }
+      {tags.map((tag) => <Tag>{tag}</Tag>)}
     </div>
     <div class="actions flex gap-5">
       <a

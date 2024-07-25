@@ -23,21 +23,14 @@ const { id, name, extension, url, path, tags } = Astro.props;
   <div class="body flex flex-col gap-2">
     <div class="header flex items-center gap-2 break-all text-sm md:text-base">
       <Avatar seed={id} />
-      <a
-        class="link link-info"
-        href={`/Problemas-del-Juez-Patito/problems/${id}`}>{path}</a
+      <a class="link link-info" href={`/Problemas-del-Juez-Patito/${id}`}
+        >{path}</a
       >
     </div>
     <div class="content flex flex-col gap-4 my-auto py-1">
       <p>{name}</p>
       <div class="tags flex flex-wrap gap-2">
-        {
-          tags.map((tag) => (
-            <a href={`/Problemas-del-Juez-Patito/tags/#${tag}`}>
-              <Tag>{tag}</Tag>
-            </a>
-          ))
-        }
+        {tags.map((tag) => <Tag>{tag}</Tag>)}
       </div>
     </div>
     <div class="details flex justify-between mt-auto text-sm">

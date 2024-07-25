@@ -35,11 +35,11 @@ const id = "search_modal";
           name="search-input"
           id="search-input"
           class="search-input w-full"
-          placeholder="Search..."
+          placeholder="Buscar..."
           autofocus
           autocomplete="off"
         />
-        <input type="reset" value="x" class="btn btn-square btn-sm" />
+        <input type="reset" value="x" class="btn btn-circle btn-xs" />
       </label>
     </form>
     <div
@@ -123,7 +123,7 @@ const id = "search_modal";
     results.forEach((result) => {
       const div = document.createElement("div");
       div.innerHTML = `
-        <a href="/${BASE_SITE}/problems/${result.id}" class="flex flex-col gap-2 p-2 border-[1px] border-neutral border-opacity-50 rounded-lg select-none">
+        <a href="/${BASE_SITE}/${result.id}" class="flex flex-col gap-2 p-2 border-[1px] border-neutral border-opacity-50 rounded-lg select-none">
           <span class="flex gap-2 items-center">
             <span class="text-xs">${result.id}</span>
             <span class="text-lg overflow-hidden whitespace-nowrap text-ellipsis">${result.name}</span>
