@@ -8,9 +8,7 @@
 # donde es solo hay que buscar los elementos "." y ".." y colocarlos al final de la lista.
 #
 # > [!note] Nota
-# > Al intercambiar el elemento "." o ".." con el último elemento de la lista,
-# > se debe decrementar el índice del último elemento de la lista para no volver
-# > a intercambiar el mismo elemento.
+# > Al intercambiar el elemento "." o ".." con el último elemento de la lista, se debe decrementar el índice del último elemento de la lista para no volver a intercambiar el mismo elemento.
 
 # steps
 # 1. Obtener los casos de prueba `T``

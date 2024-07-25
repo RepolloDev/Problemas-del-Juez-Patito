@@ -11,11 +11,8 @@
 # d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}
 # $$
 #
-# > [!note] Nota
-# > En el código se utiliza el valor `min_distance = maxsize` para
-# > inicializar la variable que guardará la distancia minima,
-# > inicialmente es el valor máximo posible para que puede ser
-# > reemplazado por cualquier valor menor.
+# > [!note] Sobre el código
+# > En el código se utiliza el valor `min_distance = maxsize` para inicializar la variable que guardará la distancia minima, inicialmente es el valor máximo posible para que puede ser reemplazado por cualquier valor menor.
 
 # steps
 # 1. Recibir la cantidad de puntos `N` en la pantalla

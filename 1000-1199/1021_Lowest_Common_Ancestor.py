@@ -9,7 +9,7 @@
 # - La raíz del árbol es el nodo 1
 # - Para cualquier nodo `x`, su hijo izquierdo es `2 * x` y su hijo derecho es `2 * x + 1`
 #
-# TODO: Agregar un ejemplo del árbol generado
+# ![Árbol binario generado](https://thumbs4.imagebam.com/f1/c2/1c/MEUWTKI_t.png)
 #
 # La solución es más matemática que nada, pues por la naturaleza del árbol,
 # se puede obtener el nodo padre de cualquier nodo `x` con la fórmula `x // 2`.

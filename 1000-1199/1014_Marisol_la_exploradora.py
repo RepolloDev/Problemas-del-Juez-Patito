@@ -4,7 +4,11 @@
 # grafos recorrido bucles condicionales dificil
 
 # description
-# TODO: Mejorar la complejidad de memoria y tiempo, Realizarlo con kosaraju
+# Este problema se basa en el recorrido de nodos de un grafo, se tiene un grafo dirigido y se debe verificar si se puede llegar a todos los nodos desde un nodo inicial.
+#
+# > [!WARNING] Solución no aceptada
+# > La solución no es aceptada por el juez en línea por temas de límites de tiempo, se debe optimizar el código para que pueda ser aceptado.
+# > TODO: Optimizar el código para que pueda ser aceptado por el juez en línea
 
 # steps
 # 1. Recibir los enteros `N` y `M` hasta una condición de parada
@@ -15,8 +19,8 @@
 # 6. Si todos los nodos fueron visitados imprimir "SI" en caso contrario "NO"
 # 7. Verificar que desde cualquier nodo se pueda llegar a todos los nodos
 
-import sys
 from queue import Queue
+from sys import stdin, stdout
 
 
 def bfs(grafo, nodo=0):
@@ -36,7 +40,7 @@ def bfs(grafo, nodo=0):
     return all(visitados)
 
 
-for line in sys.stdin:
+for line in stdin:
     N, M = map(int, line.split())
     if N == 0 and M == 0:
         break
@@ -51,6 +55,6 @@ for line in sys.stdin:
 
     results = [bfs(relaciones, i) for i in range(N)]
     if all(results):
-        print("SI")
+        stdout.write("SI\n")
     else:
-        print("NO")
+        stdout.write("NO\n")

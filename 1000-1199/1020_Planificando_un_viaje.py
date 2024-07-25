@@ -4,11 +4,10 @@
 # facil listas bucles condicionales
 
 # description
-# > [!note] Nota
-# > Muy aparte de la difucultad para ingresar datos,
-# > resaltar que el problema se basa en saber la cantidad de camas
-# > disponibles en un hotel y su precio, para saber si es posible
-# > alojar a todos los participantes.
+# El problema se basa en saber la cantidad de camas
+# disponibles en un hotel y su precio, para saber si es posible
+# alojar a todos los participantes, para eso se realizan
+# varias comparaciones y se calcula el precio total.
 
 # steps
 # 1. Recibir los casos de prueba hasta que ya no haya datos

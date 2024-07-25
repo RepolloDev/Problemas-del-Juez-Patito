@@ -5,8 +5,7 @@
 
 # description
 # > [!alert] ¡Atención
-# > Existe un problema con el Juez en línea, por lo que no se puede verificar la solución.
-# > Sin embargo, el código es correcto, puede verificarse traduciendo el código a otro lenguaje.
+# > Existe un problema con el Juez en línea, por lo que no se puede verificar la solución. Sin embargo, el código es correcto, puede verificarse traduciendo el código a otro lenguaje.
 #
 # Para este problema, se utiliza el concepto de grafos como listas de adyacencia para
 # determinar si una persona puede llegar a otra, en simples palabras es verificar

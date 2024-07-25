@@ -4,7 +4,9 @@
 # medio listas bucles condicionales
 
 # description
-# TODO: Mejorar la complejidad de tiempo, sacrificar memoria por tiempo
+# > [!WARNING] Tiempo excedido
+# > La solución del problema no es eficiente, por lo que en el juez se tendra el error de tiempo excedido.
+# > TODO: Mejorar la solución para que sea más eficiente
 
 # steps
 # 1. Recibir el número de casos de prueba `T`

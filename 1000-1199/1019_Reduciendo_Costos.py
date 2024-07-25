@@ -5,8 +5,8 @@
 
 # description
 # Este problema es muy simple, pues hay que obtener el valor
-# medio de entre tres números, pero para hacerlo de forma
-# más sencilla se utiliza una lista.
+# medio de entre tres números, lo cual se puede hacer ordenando
+# la lista y obteniendo el valor en la posición 1.
 
 # steps
 # 1. Recibir el número de casos de prueba `T`

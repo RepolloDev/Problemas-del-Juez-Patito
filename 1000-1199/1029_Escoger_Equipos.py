@@ -4,7 +4,11 @@
 # facil listas matematicas bucles condicionales
 
 # description
-# El problema nos dara una lista de números que representa la capacidad de jugadores de algún juego, la idea es formar **dos equipos** tomando por capitanes a los dos jugadores con mayor capacidad, luego **se alternara la elección de jugadores entre los dos capitanes**, esto se resuelve utilizando una *bandera* para saber a que equipo le toca elegir.
+# El problema nos dara una lista de números que representa la capacidad
+# de jugadores de algún juego, la idea es formar **dos equipos** tomando
+# por capitanes a los dos jugadores con mayor capacidad, luego **se alternara
+# la elección de jugadores entre los dos capitanes**, esto se resuelve
+# utilizando una *bandera* para saber a que equipo le toca elegir.
 
 # steps
 # 1. Recibir datos indeterminadamente hasta que no haya más datos, es decir hasta que se presione enter.

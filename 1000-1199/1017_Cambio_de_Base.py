@@ -10,12 +10,10 @@
 # del nuevo número en la base deseada. El proceso se repite hasta que el número
 # original sea menor que la base.
 #
-# ![ejemplo](https://rea.ceibal.edu.uy/elp/unidad-a-que-hora/cambio_base3.gif)
+# ![ejemplo](https://thumbs4.imagebam.com/40/aa/c6/MEUWTHN_t.png)
 #
-# > [!note] Nota
-# > En el código, se pone un limite en el for desde 2 hasta 10 en la iteración,
-# > ya que el problema indica que el número `n` es igual a `a` en alguna base
-# > entre 2 y 9.
+# > [!NOTE] Nota
+# > En el código, se pone un limite en el for desde 2 hasta 10 en la iteración, ya que el problema indica que el número `n` es igual a `a` en alguna base entre 2 y 9.
 
 # steps
 # 1. Recibir el número de casos de prueba `N`
