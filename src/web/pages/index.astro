@@ -4,7 +4,7 @@ import { UseScriptDB } from "@/data";
 import Card from "@/web/components/ui/Card.astro";
 import type { ScriptData } from "@/data/types";
 
-const lastData = UseScriptDB.data.slice(-10);
+const lastData = UseScriptDB.data.slice(-10).reverse();
 ---
 
 <Layout title="JPP - Juez Patito Problematico">
