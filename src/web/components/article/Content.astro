@@ -14,20 +14,46 @@ const { content, id } = Astro.props;
   <Markdown of={content} />
 </div>
 
-<style is:inline>
+<style is:global>
   :root {
     --callout-bg-color: #f0f0f005;
   }
 
-  .markdown-presentation .callout {
-    margin: 0;
-  }
+  .markdown-presentation {
+    .callout {
+      @apply m-0;
+      b,
+      strong,
+      em,
+      i {
+        @apply text-base-content !important;
+      }
+    }
 
-  .markdown-presentation li {
-    padding: 0.2rem 0.2rem 0.2rem 0.5rem;
-  }
+    li {
+      padding: 0.2rem 0.2rem 0.2rem 0.5rem;
+    }
+    ul {
+      list-style: square;
+    }
+    p:has(img:only-child) {
+      @apply flex justify-center bg-neutral bg-opacity-5 border-l-2 p-2;
 
-  .markdown-presentation ul {
-    list-style: square;
+      img {
+        @apply m-0 min-h-[14rem] max-h-[20rem] object-contain;
+      }
+    }
+    .MathJax {
+      @apply text-neutral !important;
+    }
+
+    .MathJax[display="true"] {
+      @apply flex justify-center items-center !important;
+      @apply border-l-2 bg-neutral bg-opacity-5 p-2;
+    }
+
+    .MathJax:not([display="true"]) {
+      @apply inline-block !important;
+    }
   }
 </style>
