@@ -8,7 +8,7 @@
 #
 # > [!WARNING] Solución no aceptada
 # > La solución no es aceptada por el juez en línea por temas de límites de tiempo, se debe optimizar el código para que pueda ser aceptado.
-# > TODO: Optimizar el código para que pueda ser aceptado por el juez en línea
+# TODO: Optimizar el código para que pueda ser aceptado por el juez en línea
 
 # steps
 # 1. Recibir los enteros `N` y `M` hasta una condición de parada

@@ -6,7 +6,7 @@
 # description
 # > [!WARNING] Tiempo excedido
 # > La solución del problema no es eficiente, por lo que en el juez se tendra el error de tiempo excedido.
-# > TODO: Mejorar la solución para que sea más eficiente
+# TODO: Mejorar la solución para que sea más eficiente
 
 # steps
 # 1. Recibir el número de casos de prueba `T`
