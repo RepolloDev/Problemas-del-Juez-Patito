@@ -13,5 +13,7 @@ export function removeInlineComments(text: string, ext: FileExt) {
 export function removeManyInlineComments(text: string, ext: FileExt) {
   const { comment } = getLanguageByExt(ext);
   const comments = text.split("\n").map((line) => line.replace(comment, ""));
-  return comments.join("\n").trim();
+  const result = comments.join("\n").trim();
+  if (result.includes("TODO")) return "";
+  return result;
 }
